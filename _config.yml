@@ -1,19 +1,27 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
-
-# Site settings
+# General
+name: My Tech Blog
 title: My Tech Blog
 email: gohkhoonhiang@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
     This is a blog to document my journey towards becoming a software engineer.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "" # the base hostname & protocol for your site
-twitter_username: gohkhoonhiang
-github_username: gohkhoonhiang
 
-# Build settings
 markdown: kramdown
+highlighter: rouge
+
+paginate: 5
+permalink: /:title
+
+# Social share and comments.
+twitter: gohkhoonhiang
+github: gohkhoonhiang
+# disqus-id: yourusername
+# google: +yourusername
+
+# RSS feed
+rss-feed-limit: 10
+rss-show-full: "no"
+
+# Plugins
+gems: [jekyll-paginate]
