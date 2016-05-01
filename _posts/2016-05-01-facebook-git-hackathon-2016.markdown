@@ -3,6 +3,7 @@ layout: post
 title:  "Facebook x Girls In Tech Hack For Cause Reflection"
 date:   2016-05-01 11:33:00 +0800
 tags: hackathon
+description: This post is about the experience of my first ever hackathon.
 ---
 
 # Introduction
