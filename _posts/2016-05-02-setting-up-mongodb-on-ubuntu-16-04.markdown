@@ -24,4 +24,4 @@ ExecStart=/usr/bin/mongod --quiet --config /etc/mongodb.conf
 WantedBy=multi-user.target
 {% endhighlight bash %}
 
-Now when I ran `sudo service mongod start` again, and I checked the log at `/var/log/mongodb/mongod.log`, I found the line `[initandlisten] MongoDB starting : pid=11161 port=27017 dbpath=/var/lib/mongodb 64-bit host=my-dev-server-01`, which means good news!
+Now when I ran `sudo service mongod start` again, and I checked the log at `/var/log/mongodb/mongod.log`, I found the line `[initandlisten] MongoDB starting : pid=11161 port=27017` `dbpath=/var/lib/mongodb 64-bit host=my-dev-server-01`, which means good news!
