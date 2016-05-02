@@ -1,7 +1,7 @@
 title:            My Tech Blog
 description:      I tend to forget things I’ve done or learnt. I figured that the main reason is probably because I don’t document things I’ve done. So from now on, I will try to document all that I’ve learnt, so that my future self can refer back to these documentations whenever necessary. I hope that at the same time it will also benefit those who are trying to learn the same thing I have learnt.
 # put your disqus here
-disqus_shortname: 
+disqus_shortname: gohkhoonhiang-github
 reading_time:     true # if true, shows the estimated reading time for a post
 words_per_minute: 200
 logo:             images/logo.png # logo visible in the topbar
