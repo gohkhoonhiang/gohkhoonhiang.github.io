@@ -1,7 +1,7 @@
 ---
 layout: page
 title: Tags 
-
+comments: false
 ---
 
 <div class="page-content wc-container">
