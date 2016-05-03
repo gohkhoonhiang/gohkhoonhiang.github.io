@@ -24,6 +24,8 @@ menu:
   #   url: '/theme-setup/'
   - title: 'Tags'
     url: '/tags'
+  - title: 'Archive'
+    url: '/archive'
   - title: 'About'
     url: '/about'
   # - title: 'Categories'
