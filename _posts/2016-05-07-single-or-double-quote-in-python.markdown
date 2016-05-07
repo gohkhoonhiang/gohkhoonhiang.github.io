@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Single Or Double Quote In Python
-date: 2016-05-07 02:39:15 +0800
+date: 2016-05-07 11:18:12 +0800
 tags: [python] 
 description: This post is about whether to use single quote or double quote for string in Python.
 ---
@@ -41,7 +41,7 @@ I also found another [statckexchange thread](http://programmers.stackexchange.co
 
 5. String related to functionality of code - single quotes, eg. `'SELECT str FROM table_of_strs;'`
 
-I feel it is *not* necessary to make such a distinction between user-readable text and code-related text. For me, I'm more inclined towards having all *right hand side* strings in double quotes, and all *left hand side* strings in single quotes. This is quite consistent with the first 4 rules where the identifier, which is almost always use on the *left hand side*, uses single quotes, and the rest of the strings, usually on the *right hand side*, use double quotes.
+I feel it is *not* necessary to make such a distinction between user-readable text and code-related text. For me, I'm more inclined towards having all *right hand side* strings in double quotes, and all *left hand side* strings in single quotes. This is quite consistent with the first 4 rules where the identifier, which is almost always used on the *left hand side*, uses single quotes, and the rest of the strings, usually on the *right hand side*, use double quotes.
 
 I can't seem to find an answer regarding strings that are passed as function arguments. So I decided to standardize for my future self: `always_call_function("with a string argument")`.
 
