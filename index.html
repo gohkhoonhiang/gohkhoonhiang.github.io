@@ -35,6 +35,9 @@ comments: false
   <div class="entry-content">
     {% if post.content contains "<!-- more -->" %}
     {{ post.content | split:"<!-- more -->" | first % }}
+    <span class="continue-reading">
+        <em><a href="{{ site.url }}{{ post.url }}" rel="bookmark" title="{{ post.title }}" itemprop="url">Continue reading >></a></em>
+    </span>
     {% else %}
       {{ post.content }}
     {% endif %}

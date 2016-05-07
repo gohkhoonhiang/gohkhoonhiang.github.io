@@ -26,6 +26,8 @@ b'abc'
 b'abc'
 ```
 
+<!-- more -->
+
 They are both using the `memoryview()` function, but one passes in `b'abcefg'` which is in single quote, and the other passes in `b"abc"` which is in double quote.
 
 So, should I be using single quote or double quote? I decided to search for answers elsewhere, then I found this [stackoverflow thread](http://stackoverflow.com/questions/56011/single-quotes-vs-double-quotes-in-python).

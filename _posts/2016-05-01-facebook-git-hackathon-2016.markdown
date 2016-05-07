@@ -12,6 +12,8 @@ I'm writing this about 3 hours since leaving Facebook HQ Singapore, after more t
 
 It's my first real hackathon ever. By chance, I saw a Facebook post about this event, which is a hackathon to solve one charity organization, [Dayspring](http://dayspring.org.sg)'s problems. I decided to just attempt the technical challenge and test my technical ability, and see if I could actually join the hackathon. When I got an invitation to the event for successfully ranking top 30s in the test, I thought maybe there weren't many participants so I had the chance to go. It was then encouraging to hear from the organizing team that there were actually over 500 submissions and I got to where I was because of my technical skills.
 
+<!-- more -->
+
 It was pretty exciting yet stressful for me prior to the event. On one hand, I was excited that I could join a hackathon for real, because I haven't been to one. On the other hand, I felt that I wasn't prepared for such a feat just yet and felt stressful about whether I could contribute to the event at all.
 
 # Preparation
