@@ -26,6 +26,8 @@ menu:
     url: '/tags'
   - title: 'Archive'
     url: '/archive'
+  - title: 'Projects'
+    url: '/projects'
   - title: 'About'
     url: '/about'
   # - title: 'Categories'
