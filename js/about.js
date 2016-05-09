@@ -52,10 +52,10 @@ $(document).ready(function() {
                 }
 		var url = "//docs.google.com/forms/d/16S1tuPQY_g0atfjLNnGxv5vyo3BiWThXoYchwOArXy0/formResponse";
 		var data = {
-			'entry.976136711': $('#contact-name').val(),
-			'entry.1715736389': $('#contact-email').val(),
-			'entry.261050291': $('#contact-number').val(),
-			'entry.177081687': $('#contact-purpose').val(),
+			'entry.976136711': contactName,
+			'entry.1715736389': contactEmail,
+			'entry.261050291': contactNumber,
+			'entry.177081687': contactPurpose,
 		};
 		$.ajax({
 			type: "POST",
