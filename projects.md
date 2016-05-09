@@ -56,7 +56,7 @@ This is my personal TO-LEARN list. I hope to learn all these things and also blo
 2. [ ] Build a stock monitor app with data visualization
 3. [x] Build scripts to publish posts on jekyll blog
 4. [ ] Build my own Jekyll theme for tutorial-based websites
-5. [ ] Build a one-page website resume
+5. [x] Build a one-page website resume
 
 # Others
 
