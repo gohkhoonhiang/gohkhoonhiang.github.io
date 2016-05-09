@@ -3,6 +3,7 @@ layout: page
 title: Projects
 permalink: /projects/
 comments: false
+share: false
 ---
 
 This is my personal TO-LEARN list. I hope to learn all these things and also blog about them in this blog. It seems like a daunting list, at least to me, but I will do my best.
