@@ -224,3 +224,31 @@ ul.panel-list {
     width: 700px;
   }
 }
+
+@media (max-width: 850px) {
+  /*
+   * Sidebar
+   */
+  .side-bar {
+    bottom: 20px;
+    width: 80px;
+    height: auto;
+    position: fixed;
+    right: 10%;
+    margin: 0 -20px 0 0;
+    z-index: 1;
+  }
+  .side-bar ul {
+    list-style: none;
+  }
+  
+  .side-bar ul li {
+    padding: 10px;
+    border-radius: 5px;
+    background: #666;
+    color: #fff;
+    text-align: center;
+    font-size: 1rem;
+    line-height: 1rem;
+  }
+}
