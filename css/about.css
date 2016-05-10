@@ -154,6 +154,13 @@ ul.panel-list {
 }
 
 /*
+ * Navbar
+ */
+.navbar-toggle {
+  background-color: rgba(102,102,102,.5);
+}
+
+/*
  * Sidebar
  */
 .side-bar {
