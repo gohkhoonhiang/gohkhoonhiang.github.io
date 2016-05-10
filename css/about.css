@@ -175,6 +175,7 @@ ul.panel-list {
   padding: 10px;
   border-radius: 5px;
   background: #666;
+  opacity: .5;
   color: #fff;
   text-align: center;
   font-size: 1.5rem;
@@ -246,6 +247,7 @@ ul.panel-list {
     padding: 10px;
     border-radius: 5px;
     background: #666;
+    opacity: .5;
     color: #fff;
     text-align: center;
     font-size: 1rem;
