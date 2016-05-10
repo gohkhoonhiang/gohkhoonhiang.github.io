@@ -152,7 +152,35 @@ img {
 ul.panel-list {
 	list-style: none;
 }
- 
+
+/*
+ * Sidebar
+ */
+.side-bar {
+  bottom: 20px;
+  width: 100px;
+  height: auto;
+  position: fixed;
+  right: 10%;
+  margin: 0 -110px 0 0;
+  z-index: 1;
+}
+
+.side-bar ul {
+  list-style: none;
+}
+
+.side-bar ul li {
+  margin: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  background: #666;
+  color: #fff;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.5rem;
+}
+
 /*
  * Footer
  */
