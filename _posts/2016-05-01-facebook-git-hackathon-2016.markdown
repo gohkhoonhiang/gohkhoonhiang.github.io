@@ -28,7 +28,7 @@ When I was finally at the event and started mingling around with other participa
 
 I felt really fortunate that I had found a team where I might be able to use my skills in Python. My team's setup is pretty interesting. We have 2 C# developers, 1 front-end developer, 1 C developer and a Java developer myself. After brainstorming, we decided to use C# and Python for the backend, since the C developer and I also know Python. We will have a donation portal running on a C# server, then another Python server for data reporting. With this configuration, every team member's skills in different languages can be utilized.
 
-My partner and I decided to use Django because the she has experience in the framework and we would have base code to work with immediately. Since I haven't used Django before, she helped set up the backend API server and I pulled the settings she has set up and tried to work from there.
+My partner and I decided to use Django because she has experience in the framework and we would have base code to work with immediately. Since I haven't used Django before, she helped set up the backend API server and I pulled the settings she has set up and tried to work from there.
 
 # Setup Nightmare
 
@@ -46,15 +46,15 @@ Since I have spent so much time setting up, my other team mates have already gon
 * Get the monthly actual donation vs target donation amounts of a given year
 * Get the number of donors who have not donated in the past X number of days/weeks/months/years
 
-There were some bugs here and there when I coded the last function, because it was most complicated and my mind was getting sleepy towards the end of the hackathon. Nevertheless, I still managed to fixed those bugs. It was a pity I couldn't start on 1 more function I was supposed to do, which was to get the top ranking donors. My partner has been helpful to take over this feature.
+There were some bugs here and there when I coded the last function, because it was most complicated and my mind was getting sleepy towards the end of the hackathon. Nevertheless, I still managed to fix those bugs. It was a pity I couldn't start on 1 more function I was supposed to do, which was to get the top ranking donors. My partner has been helpful to take over this feature.
 
 # Sharing Time
 
-Despite of my setup nightmare and buggy reporting functions, we managed to complete what we planned to achieve ahead of time. So our team just started chit-chatting and sharing our experiences amongst ourselves. It was really eye-opening to hear about what my other team members are doing in their current job. Coming from a non-technological enterprise background, I realized that I haven't been exposed to a lot of the cool frontier technologies they have been using in their companies. It stirred up a desire in me to want to work with such companies where I can be exposed to various tools and technologies.
+Despite my setup nightmare and buggy reporting functions, we managed to complete what we planned to achieve ahead of time. So our team just started chit-chatting and sharing our experiences amongst ourselves. It was really eye-opening to hear about what my other team members are doing in their current job. Coming from a company that is not tech-based, I realized that I haven't been exposed to a lot of the cool frontier technologies they have been using in their companies. It stirred up a desire in me to want to work with such companies where I can be exposed to various tools and technologies.
 
 # Award Presentation
 
-When the time came for every team to present their idea and prototype, it was interesting to see how much people can actually do within such a short amount of time. There was even one brave solo lady developer who came up with the *Best Creative Idea* of a charity organizations aggregator app. Whereas for our team, we managed to win the *Most User-friendly App* award.
+When the time came for every team to present its idea and prototype, it was interesting to see how much people can actually do within such a short amount of time. There was even one brave solo lady developer who came up with the *Best Creative Idea* of a charity organizations aggregator app. Whereas for our team, we managed to win the *Most User-friendly App* award.
 
 # Learning Points
 
@@ -62,7 +62,7 @@ I reflected on the whole event and came up with a few learning points.
 
 ## Come Prepared
 
-Even though everyone has different skills and language background, it was unofficially stated on the event group that it was recommended to use Django as the backend framework. Meaning that I could have done the setup for Django prior to attending the event. Then I wouldn't have spent so much time setting up my dev environment during the actual event, and could have better used the time to write better code or even complete the 4th function I was supposed to write.
+Even though everyone has different skills and language background, it was unofficially stated on the event group page that it was recommended to use Django as the backend framework. Meaning that I could have done the setup for Django prior to attending the event. Then I wouldn't have spent so much time setting up my dev environment during the actual event, and could have better used the time to write better code or even complete the 4th function I was supposed to write.
 
 ## Background Does Not Matter, Desire Does
 
