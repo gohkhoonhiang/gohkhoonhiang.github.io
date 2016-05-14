@@ -17,7 +17,7 @@ url: 'https://gohkhoonhiang.github.io'
 # See the example
 menu:
   - title: 'Home'
-    url: '/'
+    url: 'https://gohkhoonhiang.github.io'
   # - title: 'Fork'
   #   url: 'http://github.com/gohkhoonhiang/neo-hpstr-jekyll-theme'
   # - title: 'Install'
