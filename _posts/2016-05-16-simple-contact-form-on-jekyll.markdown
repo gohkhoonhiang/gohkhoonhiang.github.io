@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  Simple Contact Form On Jekyll
-date: 2016-05-09 23:31:01 +0800
+date: 2016-05-16 00:25:17 +0800
 tags: 
 description: This post is about how to create a simple contact form on Jekyll blog.
 ---
@@ -103,17 +103,25 @@ $('#contact-form-submit').click(function(e) {
 
 # CORS
 
-So far things have gone well, except that I keep getting this error:
+So far things have gone well, except that I keep getting this error on Chrome:
 
 ```
 XMLHttpRequest cannot load https://docs.google.com/forms/d/16S1tuPQY_g0atfjLNnGxv5vyo3BiWThXoYchwOArXy0/formResponse. No 'Access-Control-Allow-Origin' header is present on the requested resource. Origin 'null' is therefore not allowed access.
 ```
 
-The strange thing is, even though I got this error, the data were still successfully posted to my Google Forms datastore. I still have no idea how this happened.
+, and this error on Firefox:
+
+```
+Cross-Origin Request Blocked: The Same Origin Policy disallows reading the remote resource at https://docs.google.com/forms/d/16S1tuPQY_g0atfjLNnGxv5vyo3BiWThXoYchwOArXy0/formResponse. (Reason: CORS header 'Access-Control-Allow-Origin' missing).
+```
+
+After some trial-and-error, I realized that if the protocol is `https`, the data will be posted despite having the same error message in the console. However, this creates another problem: how do I force the user to visit the `https` version of my page?
+
+Finally, I found a proper documentation that talks about forcing `https` for every request [here](https://konklone.com/post/github-pages-now-sorta-supports-https-so-use-it).
 
 # Conclusion
 
-The strange error message aside, I find that Google Forms is a very handy way to create a simple datastore on a Jekyll blog. It requires a little setup at the Google Forms page, and some custom form creation on the blog. However, there is no need to set up a backend server and to deal with server-side scripting, which will make life easier for many bloggers who just want to focus on writing content. I hope this post has been helpful for you.
+The strange error message aside, I find that Google Forms is a very handy way to create a simple datastore on a Jekyll blog. It requires a little setup at the Google Forms page, some custom form creation on the blog, and the Javascript to force `https` protocol for every page visit. However, there is no need to set up a backend server and to deal with server-side scripting, which will make life easier for many bloggers who just want to focus on writing content. I hope this post has been helpful for you.
 
 If you ever know why the error occurred yet the data were posted, feel free to comment in the comments section. I would love to hear from you why that is so. Thank you!
 
