@@ -198,6 +198,53 @@ ul.panel-list {
 }
 
 /*
+ * Tipbar
+ */
+.tip-bar {
+  bottom: 50%;
+  margin: 0;
+  position: fixed;
+  height: 150px;
+  z-index: 1;
+}
+
+.tip-bar .handle {
+  width: 30px;
+  position: absolute;
+  right: 0; 
+  background-color: #999;
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+  height: 150px;
+  padding: 65px 5px;
+  cursor: pointer;
+}
+
+.tip-bar .tip {
+  padding: 10px;
+  width: 250px;
+  position: absolute;
+  right: 0;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  background: #666;
+  color: #fff;
+}
+
+.tip-bar .tip ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.tip-bar .tip ul li {
+  padding: 5px;
+  text-align: left;
+  font-size: 1.2rem;
+  line-height: 1.2rem;
+}
+
+/*
  * Footer
  */
 

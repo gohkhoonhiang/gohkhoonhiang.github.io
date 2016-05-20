@@ -92,4 +92,31 @@ $(document).ready(function() {
             $(this).parent().removeClass("has-warning");
         }
     });
+    $(window).on('scroll', function(e) {
+        if ($('.active > a')[0].innerText == "Skills") {
+            $('.tip-bar').show();
+            $('.tip-bar .tip').hide();
+            closeTipBar();
+        } else {
+            $('.tip-bar').hide();
+            closeTipBar();
+        }
+    });
+    $('.tip-bar .handle').click(function(e) {
+        if ($('.tip-bar .tip').is(':visible')) {
+            closeTipBar();
+        } else {
+            openTipBar();
+        }
+    });
+    function closeTipBar() {
+        $('.tip-bar .tip').hide();
+        $('.tip-bar .handle').css("right", "0");
+        $('.tip-bar .handle').html('<span class="glyphicon glyphicon-menu-left"></span>');
+    }
+    function openTipBar() {
+        $('.tip-bar .tip').show();
+        $('.tip-bar .handle').css("right", "250px");
+        $('.tip-bar .handle').html('<span class="glyphicon glyphicon-menu-right"></span>');
+    }
 });
