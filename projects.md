@@ -58,6 +58,7 @@ This is my personal TO-LEARN list. I hope to learn all these things and also blo
 3. [x] Build scripts to publish posts on jekyll blog
 4. [ ] Build my own Jekyll theme for tutorial-based websites
 5. [x] Build a one-page website resume
+6. [ ] Build post-commit hooks to post blog update to Twitter
 
 # Others
 
