@@ -24,6 +24,7 @@ This is my personal TO-LEARN list. I hope to learn all these things and also blo
 1. [ ] Learn [Tornado](http://www.tornadoweb.org/en/stable/)
 2. [ ] Learn [Flask](http://flask.pocoo.org)
 3. [ ] Learn [Django](https://www.djangoproject.com)
+4. [ ] Learn [Ruby on Rails](http://rubyonrails.org/)
 
 # Javascript Frameworks
 
