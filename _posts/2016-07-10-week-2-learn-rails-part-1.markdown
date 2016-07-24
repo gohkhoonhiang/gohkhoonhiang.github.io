@@ -12,8 +12,8 @@ This is the second part of the six-week Ruby on Rails learning project.
 2. [Week 2: Learn Rails (Part 1)]({{site.url}}/2016/07/week-2-learn-rails-part-1/)
 3. Week 3: Learn Rails (Part 2)
 4. Week 4: Learn Rails (Part 3)
-5. Week 5: Learn Rails (Part 4)
-6. Week 6: Practice Rails
+5. Week 5: Practice Rails (Part 1)
+6. Week 6: Practice Rails (Part 2)
 
 <!-- more -->
 
