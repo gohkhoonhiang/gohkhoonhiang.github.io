@@ -8,7 +8,7 @@ description: This post is a summary of what I have learnt in the first week of t
 
 This is the first part of the six-week Ruby on Rails learning project.
 
-1. [Week 1: Learn Ruby]({{site.url}}/2016/06/week-1-learn-ruby/)
+1. [Week 1: Learn Ruby]({{site.url}}/2016/07/week-1-learn-ruby/)
 2. Week 2: Learn Rails (Part 1)
 3. Week 3: Learn Rails (Part 2)
 4. Week 4: Learn Rails (Part 3)
