@@ -82,10 +82,10 @@
                         fab
                         small
                       >
-                      <v-icon>{{ configs.icon }}</v-icon>
+                      <v-icon>(( configs.icon ))</v-icon>
                       </v-btn>
                     </template>
-                    <span>{{ title }}</span>
+                    <span>(( title ))</span>
                   </v-tooltip>
                 </v-card-text>
 
@@ -122,7 +122,7 @@
                                 class="light-blue lighten-5"
                                 height="50px"
                               >
-                                <v-card-title class="subtitle-1">{{ sub_skill }}</v-list-item-title>
+                                <v-card-title class="subtitle-1">(( sub_skill ))</v-list-item-title>
                               </div>
                               <v-card-text>
                                 <v-list
@@ -133,7 +133,7 @@
                                     v-for="(skill_level, skill) in configs"
                                     :key="skill"
                                   >
-                                    <v-list-item-title class="body-2">{{ skill }}</v-list-item-title>
+                                    <v-list-item-title class="body-2">(( skill ))</v-list-item-title>
                                     <v-icon v-for="level in skill_level">mdi-star</v=icon>
                                     <v-icon v-for="level in (5 - skill_level)">mdi-star</v=icon>
                                   </v-list-item>
@@ -154,7 +154,7 @@
                           v-for="(configs, skill_level) in skill_levels"
                           :key="skill_level"
                         >
-                          <v-icon small v-for="i in configs.level">mdi-star</v-icon><v-icon small v-for="i in (5 - configs.level)">mdi-star-outline</v-icon><span class="ml-1">{{ configs.description }}</span>
+                          <v-icon small v-for="i in configs.level">mdi-star</v-icon><v-icon small v-for="i in (5 - configs.level)">mdi-star-outline</v-icon><span class="ml-1">(( configs.description ))</span>
                         </v-list-item>
                       </v-list>
                     </v-card-text>
@@ -189,8 +189,8 @@
                                 class="light-blue lighten-5"
                                 height="100px"
                               >
-                                <v-card-title class="mb-1 subtitle-1">{{ company }}</v-card-title>
-                                <v-card-subtitle class="subtitle-2">{{ configs.job_title }} <span class="caption"><em>{{ configs.join_date }} - {{ configs.end_date }}</em></span></v-card-subtitle>
+                                <v-card-title class="mb-1 subtitle-1">(( company ))</v-card-title>
+                                <v-card-subtitle class="subtitle-2">(( configs.job_title )) <span class="caption"><em>(( configs.join_date )) - (( configs.end_date ))</em></span></v-card-subtitle>
                               </div>
                               <v-card-text>
                                 <p class="body-2">Key responsibilities:</p>
@@ -202,7 +202,7 @@
                                     v-for="(responsibility, i) in configs.responsibilities"
                                     :key="i"
                                   >
-                                    <v-icon>mdi-check</v-icon><span class="ml-1">{{ responsibility }}</span>
+                                    <v-icon>mdi-check</v-icon><span class="ml-1">(( responsibility ))</span>
                                   </v-list-item>
                                 </v-list>
                                 <p class="body-2">Key achievements:</p>
@@ -214,7 +214,7 @@
                                     v-for="(achievement, i) in configs.achievements"
                                     :key="i"
                                   >
-                                    <v-icon>mdi-star</v-icon><span class="ml-1">{{ achievement }}</span>
+                                    <v-icon>mdi-star</v-icon><span class="ml-1">(( achievement ))</span>
                                   </v-list-item>
                                 </v-list>
                               </v-list-item>
@@ -241,6 +241,7 @@
   <script>
     new Vue({
       el: '#app',
+      delimiters: ["((", "))"],
       vuetify: new Vuetify(),
       data: {
         links: {
