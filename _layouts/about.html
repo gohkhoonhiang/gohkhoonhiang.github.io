@@ -1,453 +1,345 @@
-<!doctype html>
-<!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html class="no-js lt-ie9 lt-ie8" lang="en"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html class="no-js lt-ie9" lang="en"><![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
+<!DOCTYPE html>
+<html>
 <head>
-{% include head.html %}
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.2/css/font-awesome.min.css">
-<link href="../assets/css/pictonic/css/pictonic.css" rel="stylesheet">
-<link href="../assets/css/about.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@5.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, minimal-ui">
+  <style>
+    [v-cloak] > * { display:none }
+    [v-cloak]::before {  /* source: https://gist.github.com/wellington1993/d842720aff297d0a27cc8fb8c1e3735f */
+      content: " ";
+      display: block;
+      position: fixed;
+      left: 0px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      z-index: 9999;
+      background:  url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+PHN2ZyB4bWxuczpzdmc9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiB2ZXJzaW9uPSIxLjAiIHdpZHRoPSI2NHB4IiBoZWlnaHQ9IjY0cHgiIHZpZXdCb3g9IjAgMCAxMjggMTI4IiB4bWw6c3BhY2U9InByZXNlcnZlIj48Zz48cGF0aCBkPSJNNzEgMzkuMlYuNGE2My42IDYzLjYgMCAwIDEgMzMuOTYgMTQuNTdMNzcuNjggNDIuMjRhMjUuNTMgMjUuNTMgMCAwIDAtNi43LTMuMDN6IiBmaWxsPSIjMDAwIi8+PHBhdGggZD0iTTcxIDM5LjJWLjRhNjMuNiA2My42IDAgMCAxIDMzLjk2IDE0LjU3TDc3LjY4IDQyLjI0YTI1LjUzIDI1LjUzIDAgMCAwLTYuNy0zLjAzeiIgZmlsbD0iI2UxZTFlMSIgdHJhbnNmb3JtPSJyb3RhdGUoNDUgNjQgNjQpIi8+PHBhdGggZD0iTTcxIDM5LjJWLjRhNjMuNiA2My42IDAgMCAxIDMzLjk2IDE0LjU3TDc3LjY4IDQyLjI0YTI1LjUzIDI1LjUzIDAgMCAwLTYuNy0zLjAzeiIgZmlsbD0iI2UxZTFlMSIgdHJhbnNmb3JtPSJyb3RhdGUoOTAgNjQgNjQpIi8+PHBhdGggZD0iTTcxIDM5LjJWLjRhNjMuNiA2My42IDAgMCAxIDMzLjk2IDE0LjU3TDc3LjY4IDQyLjI0YTI1LjUzIDI1LjUzIDAgMCAwLTYuNy0zLjAzeiIgZmlsbD0iI2UxZTFlMSIgdHJhbnNmb3JtPSJyb3RhdGUoMTM1IDY0IDY0KSIvPjxwYXRoIGQ9Ik03MSAzOS4yVi40YTYzLjYgNjMuNiAwIDAgMSAzMy45NiAxNC41N0w3Ny42OCA0Mi4yNGEyNS41MyAyNS41MyAwIDAgMC02LjctMy4wM3oiIGZpbGw9IiNiZWJlYmUiIHRyYW5zZm9ybT0icm90YXRlKDE4MCA2NCA2NCkiLz48cGF0aCBkPSJNNzEgMzkuMlYuNGE2My42IDYzLjYgMCAwIDEgMzMuOTYgMTQuNTdMNzcuNjggNDIuMjRhMjUuNTMgMjUuNTMgMCAwIDAtNi43LTMuMDN6IiBmaWxsPSIjOTc5Nzk3IiB0cmFuc2Zvcm09InJvdGF0ZSgyMjUgNjQgNjQpIi8+PHBhdGggZD0iTTcxIDM5LjJWLjRhNjMuNiA2My42IDAgMCAxIDMzLjk2IDE0LjU3TDc3LjY4IDQyLjI0YTI1LjUzIDI1LjUzIDAgMCAwLTYuNy0zLjAzeiIgZmlsbD0iIzZlNmU2ZSIgdHJhbnNmb3JtPSJyb3RhdGUoMjcwIDY0IDY0KSIvPjxwYXRoIGQ9Ik03MSAzOS4yVi40YTYzLjYgNjMuNiAwIDAgMSAzMy45NiAxNC41N0w3Ny42OCA0Mi4yNGEyNS41MyAyNS41MyAwIDAgMC02LjctMy4wM3oiIGZpbGw9IiMzYzNjM2MiIHRyYW5zZm9ybT0icm90YXRlKDMxNSA2NCA2NCkiLz48YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InJvdGF0ZSIgdmFsdWVzPSIwIDY0IDY0OzQ1IDY0IDY0OzkwIDY0IDY0OzEzNSA2NCA2NDsxODAgNjQgNjQ7MjI1IDY0IDY0OzI3MCA2NCA2NDszMTUgNjQgNjQiIGNhbGNNb2RlPSJkaXNjcmV0ZSIgZHVyPSI3MjBtcyIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiPjwvYW5pbWF0ZVRyYW5zZm9ybT48L2c+PGc+PGNpcmNsZSBmaWxsPSIjMDAwIiBjeD0iNjMuNjYiIGN5PSI2My4xNiIgcj0iMTIiLz48YW5pbWF0ZSBhdHRyaWJ1dGVOYW1lPSJvcGFjaXR5IiBkdXI9IjcyMG1zIiBiZWdpbj0iMHMiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBrZXlUaW1lcz0iMDswLjU7MSIgdmFsdWVzPSIxOzA7MSIvPjwvZz48L3N2Zz4=') 50% 50% no-repeat rgb(249,249,249);
+    }
+
+    .v-application--is-ltr .v-data-table__mobile-row__cell {
+      max-width: 50% !important;
+    }
+  </style>
 </head>
+<body>
+  <div id="app">
+    <v-app v-cloak>
+      <v-main>
+        <v-container
+          class="fill-height"
+          fluid
+        >
+          <v-row
+            align="center"
+            justify="center"
+          >
+            <v-col
+              cols="12"
+              sm="8"
+              md="6"
+            >
 
-<body data-spy="scroll" data-target="#navbar-example" id="about">
+              <v-card
+                class="mx-auto"
+                max-width="600"
+                outlined
+              >
+                <v-list-item two-line>
+                  <v-list-item-content>
+                    <div class="overline mb-4">About</div>
+                    <v-list-item-title class="headline mb-1">Goh Khoon Hiang</v-list-item-title>
+                  </v-list-item-content>
 
-{% include browser-upgrade.html %}
+                  <v-list-item-avatar
+                    tile
+                    size="80"
+                  >
+                    <img src="https://raw.githubusercontent.com/gohkhoonhiang/gohkhoonhiang.github.io/master/images/my_avatar.png">
+                  </v-list-item-avatar>
+                </v-list-item>
 
-<div class="site-wrapper home" id="home">
-    <div class="site-wrapper-inner">
-        <div class="cover-container">
-            <div class="masthead">
-                <div class="inner">
-                    <nav id="navbar-example">
-                        <div class="navbar-header">
-                            <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="glyphicon glyphicon-align-justify"></span>
-                            </button>
-                        </div>
-                        <div class="collapse navbar-collapse" id="navbarCollapse">
-                            <ul class="nav masthead-nav">
-                                <li><a href="/">Home</a></li>
-                                <li><a href="#home">Bio</a></li>
-                                <li><a href="#skills">Skills</a></li>
-                                <li><a href="#experiences">Experiences</a></li>
-                                <li><a href="#contact">Contact</a></li>
-                            </ul>
-                        </div>
-                    </nav>
-                </div>
-            </div>
-            <div class="inner cover">
-                <h1 class="cover-heading"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>&nbsp;Goh Khoon Hiang</h1>
-                <p class="lead"><span class="glyphicon glyphicon-briefcase" aria-hidden="true"></span>&nbsp;Software Developer</p>
-                <p class="lead"><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span>&nbsp;Singapore</p>
-                <p><span class="glyphicon glyphicon-globe" aria-hidden="true"></span>&nbsp;<a href="http://gohkhoonhiang.github.io">http://gohkhoonhiang.github.io</a></p>
-                <p><span class="icon-github-01"></span>&nbsp;<a href="https://github.com/gohkhoonhiang">https://github.com/gohkhoonhiang</a></p>
-                <p><span class="icon-linkedin"></span>&nbsp;<a href="https://www.linkedin.com/in/gohkhoonhiang">https://www.linkedin.com/in/gohkhoonhiang</a></p>
-                <p><span class="glyphicon glyphicon-envelope"></span>&nbsp;<a href="mailto:gohkhoonhiang@gmail.com">gohkhoonhiang@gmail.com</a></p>
-                <p><span class="glyphicon glyphicon-phone"></span>&nbsp;+65 8448 5342</p>
-                <p><span class="glyphicon glyphicon-education"></span>&nbsp;Bachelor of Computing, Computer Science (National University of Singapore)</p>
-                <p><span class="glyphicon glyphicon-comment"></span>&nbsp;English, Mandarin, Cantonese</p>
-                <p class="lead hidden-xs">
-                    <a href="#skills" class="btn btn-lg btn-default">View Skills</a>
-                </p>
-            </div>
-            <div class="mastfoot hidden-xs">
-                <div class="inner">
-                    <p>Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> using the <a href="http://getbootstrap.com/examples/cover/" target="_blank">Cover template</a> by <a href="https://twitter.com/mdo">@mdo</a>.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<div class="site-wrapper" id="skills">
-    <div class="site-wrapper-inner">
-        <div class="container">
-            <div class="inner cover visible-xs">
-                <h1 class="cover-heading">Skills</h1>
-            </div>
-            <div class="hidden-xs">
-                <div class="row">
-                    <div class="col-md-2">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Python"><span class="icon-prog-python" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-2">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Ruby"><span class="icon-prog-ruby" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-2">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="SQL"><span class="fa fa-database" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-2">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Javascript"><span class="icon-prog-js01" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-2">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="HTML"><span class="icon-html5-01" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-2">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Shell Script"><span class="icon-prog-bash02" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-2">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Tornado"><img src="../images/about/tornado.png" width="50%" height="50%"></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-2">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Flask"><span class="icon-prog-flask" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-2">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Rails"><span class="icon-prog-rails" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-2">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="jQuery"><span class="icon-prog-jquery" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-2">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="AngularJS"><span class="icon-angularjs" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-2">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Bootstrap"><img src="../images/about/bootstrap.png" width="14%" height="14%"></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-3">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Git"><span class="icon-vc-git" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-3">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="SVN"><span class="icon-vc-svn" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-3">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Eclipse"><img src="../images/about/eclipse.png" width="8%" height="8%"></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-3">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Vim"><img src="../images/about/vim.png" width="8%" height="8%"></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-4">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Word"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-4">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Excel"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-4">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="PowerPoint"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-md-6">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Windows"><span class="icon-windows" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                    <div class="col-md-6">
-                        <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-content="Linux"><span class="icon-os-linux_1_" aria-hidden="true"></span></span><br></h3>
-                        <h4><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></h4>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <!-- hidden-xs -->
-        <div class="visible-xs">
-            <div class="row">
-                <div class="col-xs-2">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="Python<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-prog-python" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-2">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="Ruby<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-prog-ruby" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-2">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="SQL<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="fa fa-database" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-2">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="Javascript<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-prog-js01" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-2">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="HTML<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-html5-01" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-2">
-                    <h3><span class="icon-popover-left" data-container="body" data-toggle="popover" data-html="true" data-content="Shell Script<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-prog-bash02" aria-hidden="true"></span></span></h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-2">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="Tornado<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><img src="../images/about/tornado-xs.png" width="65%" height="65%"></span></h3>
-                </div>
-                <div class="col-xs-2">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="Flask<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-prog-flask"></span></span></h3>
-                </div>
-                <div class="col-xs-2">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="Rails<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-prog-rails" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-2">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="jQuery<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-prog-jquery" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-2">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="AngularJS<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-angularjs" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-2">
-                    <h3><span class="icon-popover-left" data-container="body" data-toggle="popover" data-html="true" data-content="Bootstrap<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><img src="../images/about/bootstrap.png" width="65%" height="65%"></span></h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-3">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="Git<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-vc-git" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-3">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="SVN<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-vc-svn" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-3">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="Eclipse<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><img src="../images/about/eclipse.png" width="34%" height="34%"></span></h3>
-                </div>
-                <div class="col-xs-3">
-                    <h3><span class="icon-popover-left" data-container="body" data-toggle="popover" data-html="true" data-content="Vim<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><img src="../images/about/vim.png" width="34%" height="34%"></span></h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-4">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="Word<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="glyphicon glyphicon-file" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-4">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="Excel<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="glyphicon glyphicon-equalizer" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-4">
-                    <h3><span class="icon-popover-left" data-container="body" data-toggle="popover" data-html="true" data-content="PowerPoint<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="glyphicon glyphicon-blackboard" aria-hidden="true"></span></span></h3>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-xs-6">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="Windows<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-windows" aria-hidden="true"></span></span></h3>
-                </div>
-                <div class="col-xs-6">
-                    <h3><span class="icon-popover" data-container="body" data-toggle="popover" data-html="true" data-content="Linux<br><h4><span class='glyphicon glyphicon-star' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span><span class='glyphicon glyphicon-star-empty' aria-hidden='true'></span></h4>"><span class="icon-os-linux_1_" aria-hidden="true"></span></span></h3>
-                </div>
-            </div>
-        </div>
-        <!-- visible-xs -->
-        <div class="inner cover hidden-xs">
-            <p class="lead">
-                <a href="#experiences" class="btn btn-lg btn-default">Experiences</a>
-            </p>
-        </div>
-    </div>
-</div>
-<div class="site-wrapper" id="experiences">
-    <div class="site-wrapper-inner">
-        <div class="container">
-            <div class="inner cover visible-xs">
-                <h1 class="cover-heading">Experiences</h1>
-            </div>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;Teckwah Industrial Corporation Ltd</h3>
-                            <br><span class="glyphicon glyphicon-user"></span>&nbsp;Senior Developer<br><span class="glyphicon glyphicon-time"></span>&nbsp;April 2015 - Present
-                        </div>
-                        <div class="panel-body">
-                            <p>
-                                <em>Key Responsibilities:</em>
-                            <ul class="panel-list">
-                                <li><span class="glyphicon glyphicon-ok"></span>&nbsp;System enhancement</li>
-                                <li><span class="glyphicon glyphicon-ok"></span>&nbsp;System implementation</li>
-                                <li><span class="glyphicon glyphicon-ok"></span>&nbsp;Quality assurance</li>
-                            </ul>
-                            </p>
-                            <p>
-                                <em>Key Achievements:</em>
-                            <ul class="panel-list">
-                                <li><span class="glyphicon glyphicon-certificate"></span>&nbsp;Implemented a shopping cart module for Vinfiniti system (Spring/ExtJS)</li>
-                                <li><span class="glyphicon glyphicon-certificate"></span>&nbsp;Implemented an admin module for vLocate system (Ninja/AngularJS)</li>
-                                <li><span class="glyphicon glyphicon-certificate"></span>&nbsp;Implemented a workflow system for MPD submission (Joget Workflow)</li>
-                            </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;Ecquaria Technologies Pte Ltd</h3>
-                            <br><span class="glyphicon glyphicon-user"></span>&nbsp;Senior Software Engineer<br><span class="glyphicon glyphicon-time"></span>&nbsp;January 2014 - April 2015
-                        </div>
-                        <div class="panel-body">
-                            <p>
-                                <em>Key Responsibilities:</em>
-                            <ul class="panel-list">
-                                <li><span class="glyphicon glyphicon-ok"></span>&nbsp;Requirements gathering</li>
-                                <li><span class="glyphicon glyphicon-ok"></span>&nbsp;Prototyping</li>
-                                <li><span class="glyphicon glyphicon-ok"></span>&nbsp;User training</li>
-                            </ul>
-                            </p>
-                            <p>
-                                <em>Key Achievements:</em>
-                            <ul class="panel-list">
-                                <li><span class="glyphicon glyphicon-certificate"></span>&nbsp;Delivered phases 2A and 2B of ICMS project on time</li>
-                                <li><span class="glyphicon glyphicon-certificate"></span>&nbsp;Analyzed, designed and built prototypes for Coroner's Court and Youth Court modules (HTML/jQuery/CSS)</li>
-                            </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="inner cover hidden-xs">
-            <p class="lead">
-                <a href="#experiences2" class="btn btn-lg btn-default">More Experiences</a>
-            </p>
-        </div>
-    </div>
-</div>
-<div class="site-wrapper" id="experiences2">
-    <div class="site-wrapper-inner">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;Ecquaria Technologies Pte Ltd</h3>
-                            <br><span class="glyphicon glyphicon-user"></span>&nbsp;Software Engineer<br><span class="glyphicon glyphicon-time"></span>&nbsp;July 2012 - December 2013
-                        </div>
-                        <div class="panel-body">
-                            <p>
-                                <em>Key Responsibilities:</em>
-                            <ul class="panel-list">
-                                <li><span class="glyphicon glyphicon-ok"></span>&nbsp;Requirements gathering</li>
-                                <li><span class="glyphicon glyphicon-ok"></span>&nbsp;Prototyping</li>
-                                <li><span class="glyphicon glyphicon-ok"></span>&nbsp;Project Management</li>
-                            </ul>
-                            </p>
-                            <p>
-                                <em>Key Achievements:</em>
-                            <ul class="panel-list">
-                                <li><span class="glyphicon glyphicon-certificate"></span>&nbsp;Delivered phases 1A and 1B of ICMS project on time</li>
-                                <li><span class="glyphicon glyphicon-certificate"></span>&nbsp;Designed a documents payment module for ICMS system</li>
-                            </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="panel panel-default">
-                        <div class="panel-heading">
-                            <h3 class="panel-title"><span class="glyphicon glyphicon-briefcase"></span>&nbsp;Ecquaria Technologies Pte Ltd</h3>
-                            <br><span class="glyphicon glyphicon-user"></span>&nbsp;Intern<br><span class="glyphicon glyphicon-time"></span>&nbsp;December 2011
-                        </div>
-                        <div class="panel-body">
-                            <p>
-                                <em>Key Responsibilities:</em>
-                            <ul class="panel-list">
-                                <li><span class="glyphicon glyphicon-ok"></span>&nbsp;System support</li>
-                                <li><span class="glyphicon glyphicon-ok"></span>&nbsp;Meetings administration</li>
-                                <li><span class="glyphicon glyphicon-ok"></span>&nbsp;Quality assurance</li>
-                            </ul>
-                            </p>
-                            <p>
-                                <em>Key Achievements:</em>
-                            <ul class="panel-list">
-                                <li><span class="glyphicon glyphicon-certificate"></span>&nbsp;Created macro-enabled Excel sheets to record system performance</li>
-                                <li><span class="glyphicon glyphicon-certificate"></span>&nbsp;Created templates for data-recording during court sessions</li>
-                            </ul>
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="inner cover hidden-xs">
-            <p class="lead">
-                <a href="#contact" class="btn btn-lg btn-default">Contact Me</a>
-            </p>
-        </div>
-    </div>
-</div>
-<div class="site-wrapper" id="contact">
-    <div class="site-wrapper-inner">
-        <div class="cover-container">
-            <div class="inner cover">
-                <h1 class="cover-heading">Contact</h1>
-                <p class="lead">
-                    <!-- Inspiration: http://morning.am/tutorials/how-to-style-google-forms/ -->
-                <form id="contact-form">
-                    <div class="form-group">
-                        <label for="contact-name">How should I address you?</label>
-                        <input type="text" class="form-control" id="contact-name" placeholder="Name" name="entry.976136711" aria-describedby="contact-name-error">
-                        <p id="contact-name-error" class="help-block"></p>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-email">How can I contact you through email?</label>
-                        <input type="email" class="form-control" id="contact-email" placeholder="Email" name="entry.1715736389" aria-describedby="contact-email-error">
-                        <p id="contact-email-error" class="help-block"></p>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-number">Or you would prefer a phone call?</label>
-                        <input type="text" class="form-control" id="contact-number" placeholder="Contact Number" name="entry.261050291" aria-describedby="contact-number-error">
-                        <p id="contact-number-error" class="help-block"></p>
-                    </div>
-                    <div class="form-group">
-                        <label for="contact-purpose">I'm excited to know how I can help you!</label>
-                        <textarea class="form-control" id="contact-purpose" placeholder="Purpose" name="entry.177081687" aria-describedby="contact-purpose-error"></textarea>
-                        <p id="contact-purpose-error" class="help-block"></p>
-                    </div>
-                    <button type="submit" class="btn btn-default" id="contact-form-submit">Submit</button>
-                </form>
-                </p>
-            </div>
-        </div>
-    </div>
-    <div class="side-bar" id="sidebar">
-        <ul>
-            <li>
-                <a href="../files/resume-1.0.pdf" target="_blank">
-                <span class="glyphicon glyphicon-download-alt"></span>
-                </a>
-            </li>
-            <li>
-                <a href="#home">
-                <span class="glyphicon glyphicon-chevron-up"></span>
-                </a>
-            </li>
-        </ul>
-    </div>
-    <div class="tip-bar hidden-xs" id="tipbar" style="display:none">
-        <div class="tip-bar handle">
-            <span class="glyphicon glyphicon-menu-left"></span>
-        </div>
-        <div class="tip-bar tip">
-            <ul>
-                <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp;Have read/attempted tutorials</li>
-                <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp;Use occasionally</li>
-                <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp;Use commonly at work</li>
-                <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp;Beyond working knowledge</li>
-                <li><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span><span class="glyphicon glyphicon-star" aria-hidden="true"></span>&nbsp;Understand inside-out</li>
-            </ul>
-        </div>
-    </div>
-</div>
+                <v-card-text>
+                  <v-tooltip
+                    v-for="(configs, title) in links"
+                    :key="title"
+                    bottom
+                  >
+                    <template v-slot:activator="{ on, attrs }">
+                      <v-btn
+                        :href="configs.url"
+                        class="mr-1"
+                        v-bind="attrs"
+                        v-on="on"
+                        fab
+                        small
+                      >
+                      <v-icon>{{ configs.icon }}</v-icon>
+                      </v-btn>
+                    </template>
+                    <span>{{ title }}</span>
+                  </v-tooltip>
+                </v-card-text>
 
-{% include scripts.html %}
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
-<script src="../assets/js/about.js"></script>
+                <v-card-actions>
+                  <v-btn text :class="menus['skills'] ? 'green lighten-5' : ''" @click="toggleMenu('skills')">Skills</v-btn>
+                  <v-btn text :class="menus['experiences'] ? 'green lighten-5' : ''" @click="toggleMenu('experiences')">Experiences</v-btn>
+                </v-card-actions>
 
+                <v-expand-transition>
+                  <v-card
+                    v-show="menus['skills']"
+                    tile
+                  >
+                    <v-card-text>
+                      <v-carousel
+                        height="350"
+                        :show-arrows="false"
+                        delimiter-icon="mdi-radiobox-marked"
+                        hide-delimiter-background
+                        light
+                      >
+                        <v-carousel-item
+                          v-for="(configs, sub_skill) in skills"
+                          :key="sub_skill"
+                        >
+                          <v-sheet
+                            height="100%"
+                          >
+                            <v-card
+                              class="mx-auto"
+                              flat
+                            >
+                              <div
+                                class="light-blue lighten-5"
+                                height="50px"
+                              >
+                                <v-card-title class="subtitle-1">{{ sub_skill }}</v-list-item-title>
+                              </div>
+                              <v-card-text>
+                                <v-list
+                                  class="transparent"
+                                  dense
+                                >
+                                  <v-list-item
+                                    v-for="(skill_level, skill) in configs"
+                                    :key="skill"
+                                  >
+                                    <v-list-item-title class="body-2">{{ skill }}</v-list-item-title>
+                                    <v-icon v-for="level in skill_level">mdi-star</v=icon>
+                                    <v-icon v-for="level in (5 - skill_level)">mdi-star</v=icon>
+                                  </v-list-item>
+                                </v-list>
+                              </v-card-text>
+                            </v-card>
+                          </v-sheet>
+                        </v-carousel-item>
+                      </v-carousel>
+                    </v-card-text>
+                    <v-card-text class="caption">
+                      <p>Footnote:</p>
+                      <v-list
+                        class="transparent"
+                        dense
+                      >
+                        <v-list-item
+                          v-for="(configs, skill_level) in skill_levels"
+                          :key="skill_level"
+                        >
+                          <v-icon small v-for="i in configs.level">mdi-star</v-icon><v-icon small v-for="i in (5 - configs.level)">mdi-star-outline</v-icon><span class="ml-1">{{ configs.description }}</span>
+                        </v-list-item>
+                      </v-list>
+                    </v-card-text>
+                  </v-card>
+                </v-expand-transition>
+
+                <v-expand-transition>
+                  <v-card
+                    v-show="menus['experiences']"
+                    tile
+                  >
+                    <v-card-text>
+                      <v-carousel
+                        height="600"
+                        :show-arrows="false"
+                        delimiter-icon="mdi-radiobox-marked"
+                        hide-delimiter-background
+                        light
+                      >
+                        <v-carousel-item
+                          v-for="(configs, company) in experiences"
+                          :key="company"
+                        >
+                          <v-sheet
+                            height="100%"
+                          >
+                            <v-card
+                              class="mx-auto"
+                              tile
+                            >
+                              <div
+                                class="light-blue lighten-5"
+                                height="100px"
+                              >
+                                <v-card-title class="mb-1 subtitle-1">{{ company }}</v-card-title>
+                                <v-card-subtitle class="subtitle-2">{{ configs.job_title }} <span class="caption"><em>{{ configs.join_date }} - {{ configs.end_date }}</em></span></v-card-subtitle>
+                              </div>
+                              <v-card-text>
+                                <p class="body-2">Key responsibilities:</p>
+                                <v-list
+                                  class="transparent"
+                                  dense
+                                >
+                                  <v-list-item
+                                    v-for="(responsibility, i) in configs.responsibilities"
+                                    :key="i"
+                                  >
+                                    <v-icon>mdi-check</v-icon><span class="ml-1">{{ responsibility }}</span>
+                                  </v-list-item>
+                                </v-list>
+                                <p class="body-2">Key achievements:</p>
+                                <v-list
+                                  class="transparent"
+                                  dense
+                                >
+                                  <v-list-item
+                                    v-for="(achievement, i) in configs.achievements"
+                                    :key="i"
+                                  >
+                                    <v-icon>mdi-star</v-icon><span class="ml-1">{{ achievement }}</span>
+                                  </v-list-item>
+                                </v-list>
+                              </v-list-item>
+                            </v-card>
+                          </v-sheet>
+                        </v-carousel-item>
+                      </v-carousel>
+                    </v-card-text>
+                  </v-card>
+                </v-expand-transition>
+
+              </v-card>
+
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-main>
+    </v-app>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue({
+      el: '#app',
+      vuetify: new Vuetify(),
+      data: {
+        links: {
+          'Homepage': { url: 'https://gohkhoonhiang.github.io', icon: 'mdi-web' },
+          'Github': { url: 'https://github.com/gohkhoonhiang', icon: 'mdi-github' },
+          'Email': { url: 'mailto:gohkhoonhiang@gmail.com', icon: 'mdi-email' },
+          'Download Resume': { url: 'https://gohkhoonhiang.github.io/files/resume-2.0.pdf', icon: 'mdi-download' },
+        },
+
+        menus: {
+          skills: false,
+          experiences: false
+        },
+
+        skill_levels: {
+          very_pro: { level: 5, description: 'Understand inside-out' },
+          pro: { level: 4, description: 'Everyday use at work' },
+          moderate: { level: 3, description: 'Occasional use at work' },
+          inactive: { level: 2, description: 'Have used in past jobs but no longer active' },
+          novice: { level: 1, description: 'Have attempted tutorials' },
+        },
+
+        skills: {
+          'Programming Languages': {
+            'Ruby': 4,
+            'SQL': 3,
+            'Javascript': 3,
+            'HTML': 3,
+            'Shell Script': 3,
+          },
+          'Web Frameworks': {
+            'Hanami': 4,
+            'Rails': 4,
+            'VueJS': 3,
+          },
+          'Others': {
+            'Vim': 4,
+            'Git': 4,
+            'Google Docs/Sheets': 3,
+          },
+        },
+
+        experiences: {
+          'Ascenda Loyalty Pte Ltd': {
+            job_title: 'Software Engineer',
+            join_date: 'August 2016',
+            end_date: 'Present',
+            responsibilities: [
+              'System design',
+              'System implementation',
+              'Quality assurance',
+            ],
+            achievements: [
+              'Analyzed, designed and implemented core PointsBank and LoyaltyEngine modules for E2E product',
+              'Created an open-source Sidekiq Web UI extension gem',
+              'Mentored intern and junior engineers',
+            ],
+          },
+
+          'Teckwah Industrial Corp Ltd': {
+            job_title: 'Software Developer',
+            join_date: 'April 2015',
+            end_date: 'August 2016',
+            responsibilities: [
+              'System enhancement',
+              'System implementation',
+              'Quality assurance',
+            ],
+            achievements: [
+              'Implemented a shopping cart module for Vinfiniti (Spring/ExtJS)',
+              'Implemented an admin module for vLocate (Ninja/AngularJS)',
+              'Implemented a workflow system for MPD submission (Joget Workflow)',
+            ],
+          },
+
+          'Ecquaria Technologies Pte Ltd': {
+            job_title: 'Software Engineer',
+            join_date: 'July 2012',
+            end_date: 'April 2015',
+            responsibilities: [
+              'Requirements gathering/prototyping',
+              'User training/support',
+              'Project management'
+            ],
+            achievements: [
+              'Delivered ICMS project for the State Courts',
+              'Analyzed, designed and built prototypes for various modules',
+              'Mentored intern developers',
+            ],
+          },
+        },
+      },
+
+      methods: {
+        toggleMenu: function(menu) {
+          var vm = this;
+          vm.menus[menu] = !vm.menus[menu];
+          Object.keys(vm.menus).forEach(function(other_menu) {
+            if (other_menu !== menu) {
+              vm.menus[other_menu] = false;
+            }
+          });
+        }
+      },
+
+    })
+  </script>
 </body>
 </html>
-
