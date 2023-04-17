@@ -10480,20 +10480,10 @@ a.back-to-top i {
   .container {
     padding: 1rem;
   }
-  .tag {
-    font-size: 0.8rem;
-  }
   .profile {
     order: 1;
     padding: 1rem;
     background-color: var(--main-background-color);
-  }
-  .profile a.icon-btn {
-    padding: 0.6rem;
-  }
-  .profile a.icon-btn i {
-    width: 1rem;
-    height: 1rem;
   }
   .profile .icon-btn:hover {
     background-color: var(--secondary-background-color);
@@ -10505,12 +10495,8 @@ a.back-to-top i {
   .profile .intro {
     justify-content: center;
   }
-  .profile .intro .avatar {
-    width: 3rem;
-    height: 3rem;
-  }
   .profile .intro .name {
-    font-size: 1rem;
+    font-size: 1.2rem;
     font-weight: 600;
   }
   .flex-divider {
@@ -10528,6 +10514,13 @@ a.back-to-top i {
   }
   .timeline .timeblock .job-title {
     font-size: 1.4rem;
+  }
+  a.back-to-top {
+    width: 1.6rem;
+    height: 1.6rem;
+  }
+  a.back-to-top i {
+    margin: 4px auto;
   }
   .footer .divider {
     display: none;
