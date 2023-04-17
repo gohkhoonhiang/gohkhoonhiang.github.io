@@ -10349,28 +10349,6 @@ body {
   background-color: var(--secondary-background-color);
 }
 
-.tooltip {
-  position: relative;
-  display: inline-block;
-}
-
-.tooltip .tooltip-text {
-  visibility: hidden;
-  background-color: var(--secondary-background-color);
-  color: var(--main-text-color);
-  text-align: center;
-  border-radius: 0.4rem;
-  padding: 0.4rem 0.8rem;
-  font-size: 0.8rem;
-  position: absolute;
-  margin-top: 1rem;
-  z-index: 1;
-}
-
-.tooltip:hover .tooltip-text {
-  visibility: visible;
-}
-
 .flex-divider {
   display: none;
 }
@@ -10403,26 +10381,17 @@ body {
 .profile .divider {
   border: 1px var(--secondary-text-color) solid;
 }
-.profile a.icon-btn {
-  padding: 0.8rem;
-  border-radius: 50%;
-  border: 1px var(--main-text-color) solid;
+.profile .socials {
+  display: flex;
+  flex-direction: column;
+}
+.profile .socials a {
+  display: inline-block;
+  text-decoration: none;
   color: var(--main-text-color);
-  text-align: center;
-  width: 1.25rem;
-  height: 1.25rem;
 }
-.profile a.icon-btn i {
-  width: 1.2rem;
-  height: 1.2rem;
-}
-.profile .icon-btn:hover {
-  cursor: pointer;
-  background-color: var(--main-background-color);
-}
-.profile .tooltip .tooltip-text {
-  background-color: var(--main-background-color);
-  color: var(--main-text-color);
+.profile .socials a:hover {
+  color: var(--secondary-text-color);
 }
 .profile .intro {
   display: flex;
@@ -10484,13 +10453,6 @@ a.back-to-top i {
     order: 1;
     padding: 1rem;
     background-color: var(--main-background-color);
-  }
-  .profile .icon-btn:hover {
-    background-color: var(--secondary-background-color);
-  }
-  .profile .tooltip .tooltip-text {
-    background-color: var(--secondary-background-color);
-    color: var(--main-text-color);
   }
   .profile .intro {
     justify-content: center;
