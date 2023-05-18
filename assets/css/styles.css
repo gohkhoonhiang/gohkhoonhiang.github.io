@@ -10492,5 +10492,20 @@ a.back-to-top i {
     margin-bottom: 0.5rem;
   }
 }
+@media print {
+  :root {
+    font-size: 14px;
+  }
+  .container .profile {
+    order: 1;
+  }
+  .container .timeline {
+    order: 2;
+  }
+  .back-to-top,
+  .footer {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=styles.css.map */
