@@ -9,377 +9,647 @@
   </head>
   <body>
     <div class="container">
-
       <div class="navbar" id="navbar">
         <div class="nav-items">
           <a class="nav-item brand" id="nav-top" href="#top" onclick="setNavActive('top')">geekhoon.dev</a>
-          <a class="nav-item" id="nav-experiences" href="#experiences" onclick="setNavActive('experiences')">Experiences</a>
+          <a class="nav-item" id="nav-experiences" href="#experience-0" onclick="setNavActive('experiences')">Experiences</a>
           <a class="nav-item" id="nav-profile" href="#profile" onclick="setNavActive('profile')">Profile</a>
-          <a class="nav-item" href="/files/resume-v0.1.3.pdf" target="_blank">
+          <a class="nav-item" id="nav-socials" href="#socials" onclick="setNavActive('socials')">Socials</a>
+          <a class="nav-item" href="/files/resume-v0.1.4.pdf" target="_blank">
             Resume
           </a>
         </div>
       </div>
 
       <div class="content-container">
+        <div class="main">
+  <div class="hero" id="top">
+    <div class="wrapper">
+      <div class="title">
+        <div class="line">Solving problems</div>
+        <div class="line">Making an impact</div>
+        <div class="line">One line of code at a time.</div>
+      </div>
 
-        <div class="cover" id="top">
-          <div class="content">
-            <div class="line">
-              Solving problems
-            </div>
-            <div class="line">
-              Making an impact
-            </div>
-            <div class="line">
-              One line of code at a time
-            </div>
-            <div class="subtext">
-              Software engineer with over 10 years of experience.
-            </div>
-            <div class="cta">
-              <a class="button" href="#timeblock-0" onclick="setNavActive('experiences')">Find out more</a>
-            </div>
+      <div class="subtitle">
+        Software engineer with over 10 years of experience.
+      </div>
+    </div>
+  </div>
+
+  <div class="section odd profile" id="profile">
+    <div class="wrapper">
+      <div class="title">About Me</div>
+
+      <div class="subtitle">
+        <div class="avatar">
+          <img src="/assets/images/my_avatar.png">
+        </div>
+        <div class="name">Goh Khoon Hiang</div>
+        <div class="small"><i class="fa-solid fa-location-dot"></i> Singapore</div>
+        <div class="small"><i class="fa-solid fa-envelope"></i> gohkhoonhiang@gmail.com</div>
+      </div>
+
+      <div class="tags">
+        <div class="tag">Ruby</div>
+        <div class="tag">Hanami</div>
+        <div class="tag">Rails</div>
+        <div class="tag">NodeJS</div>
+        <div class="tag">VueJS</div>
+        <div class="tag">HTML</div>
+        <div class="tag">JS</div>
+        <div class="tag">CSS</div>
+        <div class="tag">Systems design</div>
+        <div class="tag">Business analysis</div>
+        <div class="tag">Automated testing</div>
+        <div class="tag">Processes design</div>
+        <div class="tag">Documentation</div>
+        <div class="tag">Project management</div>
+      </div>
+    </div> <!-- wrapper -->
+  </div> <!-- section -->
+
+  <div class="section even socials" id="socials">
+    <div class="wrapper">
+      <div class="brand">
+        <div class="title">
+          geekhoon.dev
+        </div>
+
+        <div class="paragraph">
+          Handcrafted with <i class="fa-solid fa-heart"></i>.
+        </div>
+      </div>
+
+      <div class="links">
+        <div class="column">
+          <div class="title">Connect with Me</div>
+
+          <ul class="list">
+            <li>
+              <a class="link" href="https://www.linkedin.com/in/gohkhoonhiang" target="_blank">
+                <i class="fa-brands fa-linkedin"></i>
+                <span>LinkedIn</span>
+                <span class="tooltip">https://www.linkedin.com/in/gohkhoonhiang</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="link" rel="me" href="https://mastodon.hackerdrinks.social/@geekhoon" target="_blank">
+                <i class="fa-brands fa-mastodon"></i>
+                <span>Mastodon</span>
+                <span class="tooltip">https://mastodon.hackerdrinks.social/@geekhoon</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="column">
+          <div class="title">Portfolio</div>
+
+          <ul class="list">
+            <li>
+              <a class="link" href="https://github.com/gohkhoonhiang" target="_blank">
+                <i class="fa-brands fa-github"></i>
+                <span>Github</span>
+                <span class="tooltip">https://github.com/gohkhoonhiang</span>
+              </a>
+            </li>
+
+            <li>
+              <a class="link" href="https://coffeebrewapps.com" target="_blank">
+                <i class="fa-solid fa-globe"></i>
+                <span>Coffee Brew Apps</span>
+                <span class="tooltip">https://coffeebrewapps.com</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div> <!-- section -->
+
+  <div class="section odd experience-0" id="experience-0">
+    <div class="wrapper">
+      <div class="title">March 2023 - present</div>
+      <div class="subtitle">Coffee Brew Apps (Owner)</div>
+
+      <div class="paragraph">
+        During my sabbatical from full-time employment, I have worked on a personal passion project,
+        <strong>coffeebrewapps.com</strong>.
+      </div>
+
+      <div class="cards">
+        <div
+          class="card col-3"
+        >
+          <div class="title">
+            Open-source Libraries
+          </div>
+
+          <div class="paragraph">
+            I've created plugins for generating <strong>pagination</strong>, <strong>archives</strong> and rendering
+            <strong>Mermaid syntax</strong> on Jekyll sites. The plugins are open-source and hosted on Github.
           </div>
         </div>
 
-        <div class="timeline">
-          <div class="carousell">
-            <div class="timeblock" id="timeblock-0">
-              <a class="nav-left" href="#timeblock-3">
-                <i class="fa-solid fa-angles-left"></i>
-              </a>
-
-              <div class="content">
-                <div class="description">
-                  <div class="subheading">
-                    <div class="line tenure"><em>March 2023 - present</em><small></small></div>
-                    <div class="line">Coffee Brew Apps</div>
-                    <div class="line job-title">Owner</div>
-                  </div>
-
-                  <p>
-                    During my sabbatical from full-time employment, I have worked on a personal passion project,
-                    <strong>coffeebrewapps.com</strong>.
-                  </p>
-                  <p>
-                    This site is built using <strong>Jekyll</strong> and hosted on <strong>Github Pages</strong>,
-                    with the entire site layout and stylesheets built from the ground up. Along with the site, I also
-                    created various <strong>Jekyll plugins</strong> and made them open-source.
-                  </p>
-                  <p>
-                    This site also hosts a number of apps I have built for my personal use, such as the
-                    <strong>SG Bank Interests Compare App</strong> and <strong>SG SSB Tracker App</strong>,
-                    which I've also opened up for the greater public to use if they have the same needs.
-                  </p>
-                  <p>
-                    There is also an accompanying <strong>blog</strong> and a <strong>short articles</strong> page where
-                    I write on various topics about my journey as a software engineer.
-                  </p>
-
-                  <p>
-                    This site is currently in active development.
-                  </p>
-                </div> <!-- description -->
-
-                <div class="tags">
-                  <div class="subheading">Skills</div>
-
-                  <div class="section">
-                    <span class="tag">Jekyll (Ruby)</span>
-                    <span class="tag">NodeJS</span>
-                    <span class="tag">VueJS</span>
-                    <span class="tag">HTML</span>
-                    <span class="tag">CSS</span>
-                  </div>
-
-                  <div class="section">
-                    <span class="tag">Systems design</span>
-                    <span class="tag">Technical implementation</span>
-                    <span class="tag">Automated testing</span>
-                    <span class="tag">Documentation</span>
-                  </div>
-                </div> <!-- tags -->
-              </div> <!-- content -->
-
-              <a class="nav-right" href="#timeblock-1">
-                <i class="fa-solid fa-angles-right"></i>
-              </a>
-            </div> <!-- timeblock -->
-
-            <div class="timeblock" id="timeblock-1">
-              <a class="nav-left" href="#timeblock-0">
-                <i class="fa-solid fa-angles-left"></i>
-              </a>
-
-              <div class="content">
-                <div class="description">
-                  <div class="subheading">
-                    <div class="line tenure"><em>August 2016 - March 2023</em><small> (6 years 8 months)</small></div>
-                    <div class="line">Ascenda Loyalty Pte. Ltd.</div>
-                    <div class="line job-title">Staff Software Engineer</div>
-                  </div>
-
-                  <p>
-                    During my time in Ascenda, I have accomplished a few achievements:
-
-                    <ul>
-                      <li>
-                        Design and implement the LoyaltyEngine's complex points calculation and campaigns management
-                        modules, serving large banks to <strong>process millions of transactions daily</strong>.
-                      </li>
-
-                      <li>
-                        Lead <strong>two major project launches</strong> on the E2E platform <strong>on schedule</strong>,
-                        receiving <strong>positive feedback</strong> from the clients.
-                      </li>
-
-                      <li>
-                        Setting up processes to facilitate <strong>effective asynchronous communication and
-                        collaboration</strong>, allowing various teams from mutliple geographical locations to operate
-                        remotely.
-                      </li>
-
-                      <li>
-                        Leading a team of 4 engineers, providing guidance on project management and performing
-                        <strong>design and code review</strong>.
-                      </li>
-                    </ul>
-                  </p>
-
-                  <p>
-                    I have officially ended my service in Ascenda on 20 March 2023.
-                  </p>
-                </div> <!-- description -->
-
-                <div class="tags">
-                  <div class="subheading">Skills</div>
-
-                  <div class="section">
-                    <span class="tag">Hanami (Ruby)</span>
-                    <span class="tag">Ruby on Rails</span>
-                    <span class="tag">VueJS</span>
-                  </div>
-
-                  <div class="section">
-                    <span class="tag">Business analysis</span>
-                    <span class="tag">Systems design</span>
-                    <span class="tag">Technical implementation</span>
-                    <span class="tag">Automated testing</span>
-                  </div>
-
-                  <div class="section">
-                    <span class="tag">Documentation</span>
-                    <span class="tag">Processes design</span>
-                    <span class="tag">Project management</span>
-                  </div>
-                </div>
-              </div> <!-- content -->
-
-              <a class="nav-right" href="#timeblock-2">
-                <i class="fa-solid fa-angles-right"></i>
-              </a>
-            </div> <!-- timeblock -->
-
-            <div class="timeblock" id="timeblock-2">
-              <a class="nav-left" href="#timeblock-1">
-                <i class="fa-solid fa-angles-left"></i>
-              </a>
-
-              <div class="content">
-                <div class="description">
-                  <div class="subheading">
-                    <div class="line tenure"><em>April 2015 - August 2016</em><small> (1 year 4 months)</small></div>
-                    <div class="line">Teckwah Industrial Corporation Ltd.</div>
-                    <div class="line job-title">Senior Developer</div>
-                  </div>
-
-                  <p>
-                    During my service in Teckwah, I was responsible for <strong>new enhancements and bug fixing</strong>
-                    for the company's <strong>warehouse management systems</strong>. Specifically, I have helped implement
-                    a new shopping cart module for the system, and developed a framework for an administration module
-                    for the company's <strong>vLocate web application</strong>.
-                  </p>
-
-                  <p>
-                    On the side, I have also helped implement a <strong>workflow system</strong> that allows the various
-                    departments in the company to create requests that flow through the departments, replacing their
-                    existing paper-based workflow. As part of this project, I have created <strong>custom plugins</strong>
-                    for the base workflow system, Joget Workflow.
-                  </p>
-
-                  <p>
-                    I have officially ended my service in Teckwah on 4th August 2016.
-                  </p>
-                </div> <!-- description -->
-
-                <div class="tags">
-                  <div class="subheading">Skills</div>
-
-                  <div class="section">
-                    <span class="tag">Java Spring</span>
-                    <span class="tag">Ninja (Java)</span>
-                    <span class="tag">ExtJS</span>
-                    <span class="tag">AngularJS</span>
-                    <span class="tag">Joget Workflow</span>
-                  </div>
-
-                  <div class="section">
-                    <span class="tag">Business analysis</span>
-                    <span class="tag">Technical implementation</span>
-                    <span class="tag">Documentation</span>
-                  </div>
-                </div>
-              </div> <!-- content -->
-
-              <a class="nav-right" href="#timeblock-3">
-                <i class="fa-solid fa-angles-right"></i>
-              </a>
-            </div> <!-- timeblock -->
-
-            <div class="timeblock" id="timeblock-3">
-              <a class="nav-left" href="#timeblock-2">
-                <i class="fa-solid fa-angles-left"></i>
-              </a>
-
-              <div class="content">
-                <div class="description">
-                  <div class="subheading">
-                    <div class="line tenure"><em>July 2012 - April 2015</em><small> (2 years 10 months)</small></div>
-                    <div class="line">Ecquaria Technologies Pte. Ltd.</div>
-                    <div class="line job-title">Software Engineer</div>
-                  </div>
-
-                  <p>
-                    During my time with Ecquaria, I've been working on the <strong>State Court's Integrated Criminal Case
-                    Filing and Management System (ICMS)</strong>, which transforms the heavily paper-based criminal
-                    justice system to one that is <strong>automated and streamlined</strong>.
-                  </p>
-
-                  <p>
-                    My job scope involved both managerial and technical roles. As the <strong>project lead</strong>, I
-                    was responsible for overseeing the system development, testing and production support. On the
-                    technical side, I played the <strong>business analyst</strong> role, gathered requirements, wrote
-                    specification documentations and created prototypes.
-                  </p>
-
-                  <p>
-                    Aside from working on the project, I was also <strong>mentor</strong> to five interns, providing
-                    guidance to them as they performed various tasks assigned to them.
-                  </p>
-
-                  <p>
-                    I have officially ended my service in Ecquaria Technologies on 2nd April 2015.
-                  </p>
-                </div> <!-- description -->
-
-                <div class="tags">
-                  <div class="subheading">Skills</div>
-
-                  <div class="section">
-                    <span class="tag">HTML</span>
-                    <span class="tag">JS</span>
-                    <span class="tag">CSS</span>
-                  </div>
-
-                  <div class="section">
-                    <span class="tag">Business analysis</span>
-                    <span class="tag">Documentation</span>
-                    <span class="tag">Project management</span>
-                  </div>
-                </div>
-              </div> <!-- content -->
-
-              <a class="nav-right" href="#timeblock-0">
-                <i class="fa-solid fa-angles-right"></i>
-              </a>
-            </div> <!-- timeblock -->
-          </div> <!-- carousell -->
-        </div> <!-- timeline -->
-
-        <div class="profile" id="profile">
-          <div class="content">
-            <div class="intro">
-              <div class="avatar">
-                <img src="/assets/images/my_avatar.png">
-              </div>
-
-              <div class="info">
-                <div class="name">Goh Khoon Hiang</div>
-                <div class="title">Software Engineer</div>
-                <div class="location"><i class="fa-solid fa-location-dot"></i> Singapore</div>
-                <div class="email"><i class="fa-solid fa-envelope"></i> gohkhoonhiang@gmail.com</div>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="tags">
-              <div class="subheading">Skills</div>
-
-              <div class="section">
-                <span class="tag">Ruby</span>
-                <span class="tag">Hanami</span>
-                <span class="tag">Rails</span>
-                <span class="tag">NodeJS</span>
-                <span class="tag">VueJS</span>
-                <span class="tag">HTML</span>
-                <span class="tag">JS</span>
-                <span class="tag">CSS</span>
-              </div>
-
-              <div class="section">
-                <span class="tag">Systems design</span>
-                <span class="tag">Business analysis</span>
-                <span class="tag">Automated testing</span>
-                <span class="tag">Processes design</span>
-                <span class="tag">Documentation</span>
-                <span class="tag">Project management</span>
-              </div>
-            </div>
-
-            <div class="divider"></div>
-
-            <div class="tags socials">
-              <div class="subheading">Socials</div>
-
-              <div class="section">
-                <a class="tag" href="https://github.com/gohkhoonhiang" target="_blank">
-                  <i class="fa-brands fa-github"></i>
-                  <span>Github</span>
-                </a>
-
-                <a class="tag" href="https://www.linkedin.com/in/gohkhoonhiang" target="_blank">
-                  <i class="fa-brands fa-linkedin"></i>
-                  <span>LinkedIn</span>
-                </a>
-
-                <a class="tag" rel="me" href="https://mastodon.hackerdrinks.social/@geekhoon" target="_blank">
-                  <i class="fa-brands fa-mastodon"></i>
-                  <span>Mastodon</span>
-                </a>
-
-                <a class="tag" href="https://coffeebrewapps.com" target="_blank">
-                  <i class="fa-solid fa-globe"></i>
-                  <span>Coffee Brew Apps</span>
-                </a>
-              </div>
-            </div>
-          </div> <!-- content -->
-
-          <div class="cta bottom">
+        <div
+          class="card col-3"
+        >
+          <div class="title">
+            Web Apps
           </div>
-        </div> <!-- timeblock:profile -->
 
-        <div class="footer">
-          <div class="section">
-            <span>Goh Khoon Hiang © 2023</span>
-            <span class="divider">|</span>
-            <span>This page is generated using Jekyll.</span>
-            <span class="divider">|</span>
-            <span>Theme by Coffee Brew Apps.</span>
+          <div class="paragraph">
+            I've created the <strong>SG Bank Interests Compare App</strong> and <strong>SG SSB Tracker App</strong>.
+            Both are hosted on Github Pages and free for public use.
           </div>
         </div>
+
+        <div
+          class="card col-3"
+        >
+          <div class="title">
+            Articles
+          </div>
+
+          <div class="paragraph">
+            I write about my development journey in long form <strong>blog posts</strong> and <strong>short
+             articles</strong> on coffeebrewapps.com.
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section even experience-1">
+    <div class="wrapper">
+      <div class="title">August 2016 - March 2023 (6 years 8 months)</div>
+      <div class="subtitle">Ascenda Loyalty Pte. Ltd. (Staff Software Engineer)</div>
+
+      <div class="paragraph">
+        I was one of the earliest members in the Tech Team, having helped built several key products for the company
+        over the years. Having been in the team for almost 7 years, I've had the opportunity to apply various skills
+        on several projects.
+      </div>
+
+      <div class="cards">
+        <div
+          class="card col-3"
+        >
+          <div class="title">
+            Front-end Implementation
+          </div>
+
+          <div class="paragraph">
+            Implemented several whitelabel apps for banks and airlines on the TravelEdge platform using
+            <strong>Ruby on Rails</strong> and <strong>AngularJS</strong>.
+          </div>
+        </div>
+
+        <div
+          class="card col-3"
+        >
+          <div class="title">
+            Backend Integration
+          </div>
+
+          <div class="paragraph">
+            Helped build the framework for the integration of banks and airline partners into the points transfer
+            network using <strong>Hanami</strong>, and implemented several integrations using <strong>REST APIs, SOAP APIs
+              and SFTP transfer</strong>.
+          </div>
+        </div>
+
+        <div
+          class="card col-3"
+        >
+          <div class="title">
+            Scalable Architecture Design
+          </div>
+
+          <div class="paragraph">
+            Designed, implemented and helped scale the points ledger and loyalty engine systems for the End-to-End
+            loyalty platform, which handle <strong>millions of transactions daily</strong>.
+          </div>
+        </div>
+      </div> <!-- cards -->
+
+      <div class="cards">
+        <div
+          class="card col-3"
+        >
+          <div class="title">
+            Project Management
+          </div>
+
+          <div class="paragraph">
+            Lead <strong>two major project launches</strong> on the E2E loyalty platform <strong>on schedule</strong>,
+            receiving positive feedback from high-profile clients.
+          </div>
+        </div>
+
+        <div
+          class="card col-3"
+        >
+          <div class="title">
+            Processes and Practices
+          </div>
+
+          <div class="paragraph">
+            Helped setup processes and practices to facilitate <strong>effective asynchronous communication and
+             collaboration</strong> for various Tech offices across multiple geographical locations.
+          </div>
+        </div>
+
+        <div
+          class="card col-3"
+        >
+          <div class="title">
+            Mentorship
+          </div>
+
+          <div class="paragraph">
+            Lead a team of four engineers, from junior to senior, providing <strong>guidance on project
+             management</strong> and doing <strong>design and code review</strong> for the team.
+          </div>
+        </div>
+      </div> <!-- cards -->
+
+    </div> <!-- wrapper -->
+  </div> <!-- section -->
+
+  <div class="section odd experience-2">
+    <div class="wrapper">
+      <div class="title">April 2015 - August 2016 (1 year 4 months)</div>
+      <div class="subtitle">Teckwah Industrial Corporation Ltd. (Senior Developer)</div>
+
+      <div class="paragraph">
+        During my service in Techwah, I've helped implement new enhancements and fix bugs for the company's warehouse
+        management system built with <strong>ExtJS</strong> and <strong>Java Spring</strong>. I've also developed a
+        framework for the adminstrative module for the company's vLocate web application using
+        <strong>AngularJS</strong>.
+      </div>
+
+      <div class="paragraph">
+        Aside from the applications used by the logistics business, I've also helped transform the company's
+        paper-based requests workflow to digital workflow using <strong>Joget Workflow</strong>.
+      </div>
+    </div> <!-- wrapper -->
+  </div> <!-- section -->
+
+  <div class="section even experience-3">
+    <div class="wrapper">
+      <div class="title">July 2012 - April 2015 (2 years 10 months)</div>
+      <div class="subtitle">Ecquaria Technologies Pte. Ltd. (Software Engineer)</div>
+
+      <div class="paragraph">
+        During my service in Ecquaria, I've worked on the State Court's Integrated Criminal Case Filing and Management
+        System (ICMS), which transforms the heavily paper-based criminal justice system to one that is automated and
+        streamlined.
+      </div>
+
+      <div class="paragraph">
+        My main responsibilities include: helping to <strong>gather requirements</strong> from the end-user,
+        <strong>creating prototypes</strong> real-time alongside the end-user using <strong>HTML/JS/CSS</strong>,
+        writing <strong>specification documentations</strong> for the developers, performing <strong>testing</strong>
+        and providing <strong>technical support</strong> during court sessions.
+      </div>
+    </div> <!-- wrapper -->
+  </div> <!-- section -->
+</div>
+
+<style>
+.main {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  max-width: 80vw;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  min-height: 70vh;
+  background-color: var(--main-background-color);
+}
+
+.hero .wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero .title {
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  font-size: 4rem;
+  font-weight: 900;
+  line-height: 4rem;
+}
+
+.hero .subtitle {
+  font-size: 2rem;
+}
+
+.section {
+  margin: 0;
+  padding: 0;
+  min-height: 50vh;
+  order: 1;
+}
+
+.section.odd {
+  background-color: var(--secondary-background-color);
+}
+
+.section.even {
+  background-color: var(--main-background-color);
+}
+
+.section .wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.section .title {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+.section .subtitle {
+  margin-bottom: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.section .paragraph {
+  max-width: 60%;
+  margin-bottom: 1rem;
+}
+
+.section .button {
+  margin: 2rem 0;
+  padding: 0.8rem 1.6rem;
+  background-color: var(--color-border);
+  border-radius: 1rem;
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.section .button:hover {
+  cursor: pointer;
+  background-color: var(--tertiary-background-color);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: stretch;
+  justify-content: stretch;
+  width: 100%;
+  padding: 2rem 1rem;
+}
+
+.cards .card {
+  margin: 0 1rem;
+  padding: 1rem 1rem 2rem 1rem;
+  border-radius: 1rem;
+}
+
+.section.odd .cards .card {
+  background-color: var(--main-background-color);
+}
+
+.section.even .cards .card {
+  background-color: var(--secondary-background-color);
+}
+
+.cards .card.col-3 {
+  width: calc(100% / 3);
+}
+
+.cards .card.flat {
+  background-color: initial;
+}
+
+.cards .card .paragraph {
+  max-width: 100%;
+}
+
+.title {
+  font-weight: 600;
+  text-transform: uppercase;
+  padding: 1rem 0;
+}
+
+.subtitle {
+  font-size: 1.6rem;
+  font-weight: 600;
+}
+
+.profile {
+  order: 2;
+}
+
+.profile .subtitle {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.profile .avatar {
+  width: 6rem;
+  height: 6rem;
+}
+
+.profile .avatar img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.profile .small {
+  font-size: 1rem;
+}
+
+.profile .tags {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.profile .tags .tag {
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  background-color: var(--main-background-color);
+}
+
+.section.socials {
+  min-height: 35vh;
+  order: 3;
+}
+
+.section.socials .wrapper {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+}
+
+.section.socials .brand {
+  width: 30%;
+}
+
+.socials .links {
+  display: flex;
+  gap: 6rem;
+}
+
+.socials .links .link {
+  position: relative;
+  color: var(--main-text-color);
+  text-decoration: none;
+}
+
+.socials .links .link:hover,
+.socials .links .link:focus,
+.socials .links .link:active {
+  cursor: pointer;
+  color: var(--secondary-text-color);
+}
+
+.socials .links .link .tooltip {
+  display: none;
+}
+
+.socials .links .link:hover .tooltip,
+.socials .links .link:focus .tooltip,
+.socials .links .link:active .tooltip {
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background-color: var(--secondary-background-color);
+  z-index: 1;
+}
+
+.section.socials .links .list {
+  list-style-type: none;
+  padding-inline-start: 0;
+}
+
+.section.socials .links .link {
+  position: relative;
+  text-decoration: none;
+  color: var(--main-text-color);
+}
+
+.section.socials .links .link:hover {
+  cursor: pointer;
+  color: var(--secondary-text-color);
+}
+
+.section.socials .links .link .tooltip {
+  display: none;
+}
+
+.section.socials .links .link:hover .tooltip,
+.section.socials .links .link:focus .tooltip,
+.section.socials .links .link:active .tooltip {
+  display: inline-block;
+  position: absolute;
+  top: 1rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  background-color: var(--secondary-background-color);
+  z-index: 1;
+}
+
+@media (max-height: 736px) {
+  .hero {
+    height: 105vh !important;
+  }
+}
+
+@media (max-height: 568px) {
+  .hero {
+    height: 120vh !important;
+  }
+}
+
+@media (max-width: 960px) {
+  .wrapper {
+    max-width: 90vw !important;
+  }
+
+  .hero .title {
+    font-size: 3rem !important;
+    line-height: 3rem !important;
+    margin-bottom: 1rem !important;
+  }
+
+  .hero .subtitle {
+    font-size: 1.6rem !important;
+    line-height: 2rem !important;
+  }
+
+  .section .paragraph {
+    max-width: 100%;
+  }
+
+  .cards {
+    flex-direction: column !important;
+    gap: 2rem;
+    padding: 2rem 0 !important;
+  }
+
+  .cards .card {
+    width: 80% !important;
+  }
+
+  .section.socials .brand {
+    width: 100%;
+  }
+
+  .section.socials .wrapper {
+    max-width: 90vw !important;
+    flex-direction: column !important;
+    gap: 1rem;
+  }
+
+  .section.socials .section {
+    width: 100% !important;
+  }
+
+  .section.socials .links {
+    flex-direction: column !important;
+    gap: 1rem;
+  }
+}
+
+@media (min-width: 1920px) {
+  .wrapper {
+    max-width: 60vw !important;
+  }
+}
+</style>
 
       </div> <!-- content-container -->
     </div> <!-- container -->
@@ -401,24 +671,26 @@
         const observer = new IntersectionObserver((entries) => {
           for (let i=0; i<entries.length; i++) {
             if (entries[i].isIntersecting === true) {
-              const id = entries[i].target.id;
-              if (id === 'timeblock-0') {
+              const classList = entries[i].target.classList;
+              if (classList.contains('experience-0')) {
                 setNavActive('experiences');
-              } else if (id === 'profile') {
+              } else if (classList.contains('profile')) {
                 setNavActive('profile');
-              } else if (id === 'top') {
+              } else if (classList.contains('socials')) {
+                setNavActive('socials');
+              } else if (classList.contains('top')) {
                 setNavActive('top');
               }
             }
           }
         }, options);
 
-        const top = document.getElementById('top');
-        const timeblock0 = document.getElementById('timeblock-0');
-        const profile = document.getElementById('profile');
+        const top = document.getElementsByClassName('hero')[0];
         observer.observe(top);
-        observer.observe(timeblock0);
-        observer.observe(profile);
+        const sections = document.getElementsByClassName('section');
+        for (let i=0; i<sections.length; i++) {
+          observer.observe(sections[i]);
+        }
       });
 
       function setNavActive(navName) {
