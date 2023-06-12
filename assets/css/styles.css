@@ -10313,8 +10313,10 @@ body {
   margin: 0 auto;
   top: 0;
   left: 0;
+  display: flex;
+  align-items: center;
   width: 100vw;
-  height: 4rem;
+  min-height: 4rem;
   background-color: var(--main-background-color);
   z-index: 1;
 }
@@ -10414,10 +10416,17 @@ a.back-to-top:hover {
   .hero {
     min-height: auto !important;
   }
-  .hero .title,
+  .hero .wrapper {
+    padding: 1rem !important;
+  }
+  .hero .title {
+    text-align: center;
+    font-size: 1rem !important;
+    line-height: 0.5rem !important;
+  }
   .hero .subtitle {
-    font-size: 1.2rem !important;
-    line-height: 1.2rem !important;
+    text-align: center;
+    font-size: 1rem !important;
   }
   .section {
     min-height: auto !important;
@@ -10425,12 +10434,44 @@ a.back-to-top:hover {
   .section.profile {
     order: 1 !important;
   }
+  .section.profile .wrapper,
+  .section.socials .wrapper {
+    padding: 1rem !important;
+    align-items: center !important;
+  }
+  .section.profile .subtitle {
+    align-items: center !important;
+  }
   .section.profile .avatar {
     width: 4rem;
     height: 4rem;
   }
+  .section.profile .tags {
+    justify-content: center !important;
+  }
+  .section.profile .tags .tag {
+    border-bottom: 1px solid var(--main-text-color) !important;
+  }
   .section.socials {
     order: 2 !important;
+  }
+  .section.socials .links {
+    width: 100% !important;
+    justify-content: center;
+  }
+  .section.socials .links .column .title {
+    display: none;
+  }
+  .section.socials .links .column .link .tooltip {
+    display: inline-block !important;
+    position: initial !important;
+  }
+  .section.socials .links .column .link:hover .tooltip {
+    display: inline-block !important;
+    position: initial !important;
+    padding: initial !important;
+    font-size: initial !important;
+    font-weight: initial !important;
   }
   .section.experience-0,
   .section.experience-1,
@@ -10442,7 +10483,7 @@ a.back-to-top:hover {
     page-break-after: always !important;
   }
   .section .paragraph {
-    max-width: 80% !important;
+    max-width: 100% !important;
     margin-bottom: 0.5rem !important;
   }
   .cards {
@@ -10451,6 +10492,7 @@ a.back-to-top:hover {
   }
   .cards .card {
     width: 80% !important;
+    margin: 0 !important;
     padding: 1rem !important;
   }
 }

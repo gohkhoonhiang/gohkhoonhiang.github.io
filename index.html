@@ -14,8 +14,7 @@
           <a class="nav-item brand" id="nav-top" href="#top" onclick="setNavActive('top')">geekhoon.dev</a>
           <a class="nav-item" id="nav-experiences" href="#experience-0" onclick="setNavActive('experiences')">Experiences</a>
           <a class="nav-item" id="nav-profile" href="#profile" onclick="setNavActive('profile')">Profile</a>
-          <a class="nav-item" id="nav-socials" href="#socials" onclick="setNavActive('socials')">Socials</a>
-          <a class="nav-item" href="/files/resume-v0.1.4.pdf" target="_blank">
+          <a class="nav-item" href="/files/resume-v0.1.5.pdf" target="_blank">
             Resume
           </a>
         </div>
@@ -37,7 +36,7 @@
     </div>
   </div>
 
-  <div class="section odd profile" id="profile">
+  <div class="section even profile" id="profile">
     <div class="wrapper">
       <div class="title">About Me</div>
 
@@ -69,7 +68,7 @@
     </div> <!-- wrapper -->
   </div> <!-- section -->
 
-  <div class="section even socials" id="socials">
+  <div class="section odd socials" id="socials">
     <div class="wrapper">
       <div class="brand">
         <div class="title">
@@ -89,7 +88,7 @@
             <li>
               <a class="link" href="https://www.linkedin.com/in/gohkhoonhiang" target="_blank">
                 <i class="fa-brands fa-linkedin"></i>
-                <span>LinkedIn</span>
+                <span class="title">LinkedIn</span>
                 <span class="tooltip">https://www.linkedin.com/in/gohkhoonhiang</span>
               </a>
             </li>
@@ -97,7 +96,7 @@
             <li>
               <a class="link" rel="me" href="https://mastodon.hackerdrinks.social/@geekhoon" target="_blank">
                 <i class="fa-brands fa-mastodon"></i>
-                <span>Mastodon</span>
+                <span class="title">Mastodon</span>
                 <span class="tooltip">https://mastodon.hackerdrinks.social/@geekhoon</span>
               </a>
             </li>
@@ -111,7 +110,7 @@
             <li>
               <a class="link" href="https://github.com/gohkhoonhiang" target="_blank">
                 <i class="fa-brands fa-github"></i>
-                <span>Github</span>
+                <span class="title">Github</span>
                 <span class="tooltip">https://github.com/gohkhoonhiang</span>
               </a>
             </li>
@@ -119,7 +118,7 @@
             <li>
               <a class="link" href="https://coffeebrewapps.com" target="_blank">
                 <i class="fa-solid fa-globe"></i>
-                <span>Coffee Brew Apps</span>
+                <span class="title">Coffee Brew Apps</span>
                 <span class="tooltip">https://coffeebrewapps.com</span>
               </a>
             </li>
@@ -188,7 +187,7 @@
       <div class="subtitle">Ascenda Loyalty Pte. Ltd. (Staff Software Engineer)</div>
 
       <div class="paragraph">
-        I was one of the earliest members in the Tech Team, having helped built several key products for the company
+        I was one of the earliest members in the Tech Team, and have helped built several key products for the company
         over the years. Having been in the team for almost 7 years, I've had the opportunity to apply various skills
         on several projects.
       </div>
@@ -314,6 +313,26 @@
         <strong>creating prototypes</strong> real-time alongside the end-user using <strong>HTML/JS/CSS</strong>,
         writing <strong>specification documentations</strong> for the developers, performing <strong>testing</strong>
         and providing <strong>technical support</strong> during court sessions.
+      </div>
+    </div> <!-- wrapper -->
+  </div> <!-- section -->
+
+  <div class="section odd experience-4">
+    <div class="wrapper">
+      <div class="title">August 2008 - May 2012</div>
+      <div class="subtitle">National University of Singapore (Bachelor of Computing, Honours)</div>
+
+      <div class="paragraph">
+        During my studies in the Computer Science programme, I was in a project team working on a desktop file
+        synchronisation tool, Syncless, implemented using C#. It was featured on Lifehacker and Addictive Tips, and
+        also won the <strong>Microsoft's Best CS3215 Project</strong> award.
+      </div>
+
+      <div class="paragraph">
+        I was also awarded the <strong>Dean's List Awards</strong> during the August 2011 semester, for being the
+        <strong>top 5%</strong> of the cohort with a Semester Cumulative Average Point of at least 4.5/5. In the same
+        semester, I was awarded the <strong>National Infocomm Scholarship</strong> and secured a position as Software
+        Engineer in Equaria Technologies Pte. Ltd. before graduation.
       </div>
     </div> <!-- wrapper -->
   </div> <!-- section -->
@@ -494,7 +513,7 @@
   border-radius: 0.5rem;
   font-size: 0.8rem;
   font-weight: 600;
-  background-color: var(--main-background-color);
+  background-color: var(--secondary-background-color);
 }
 
 .section.socials {
@@ -582,19 +601,19 @@
   z-index: 1;
 }
 
-@media (max-height: 736px) {
+@media screen and (max-height: 736px) {
   .hero {
     height: 105vh !important;
   }
 }
 
-@media (max-height: 568px) {
+@media screen and (max-height: 568px) {
   .hero {
     height: 120vh !important;
   }
 }
 
-@media (max-width: 960px) {
+@media screen and (max-width: 960px) {
   .wrapper {
     max-width: 90vw !important;
   }
@@ -644,7 +663,7 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media screen and (min-width: 1920px) {
   .wrapper {
     max-width: 60vw !important;
   }
@@ -676,8 +695,6 @@
                 setNavActive('experiences');
               } else if (classList.contains('profile')) {
                 setNavActive('profile');
-              } else if (classList.contains('socials')) {
-                setNavActive('socials');
               } else if (classList.contains('top')) {
                 setNavActive('top');
               }
