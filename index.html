@@ -15,7 +15,7 @@
           <a class="nav-item brand" id="nav-top" href="#top" onclick="setNavActive('top')">geekhoon.dev</a>
           <a class="nav-item" id="nav-experiences" href="#experience-0" onclick="setNavActive('experiences')">Experiences</a>
           <a class="nav-item" id="nav-profile" href="#profile" onclick="setNavActive('profile')">Profile</a>
-          <a class="nav-item" href="/files/resume-v0.1.5.pdf" target="_blank">
+          <a class="nav-item" href="/files/resume-v0.1.6.pdf" target="_blank">
             Resume
           </a>
         </div>
@@ -32,7 +32,7 @@
       </div>
 
       <div class="subtitle">
-        Software engineer with over 10 years of experience.
+        Solving problems for companies for over 10 years.
       </div>
     </div>
   </div>
@@ -48,6 +48,13 @@
         <div class="name">Goh Khoon Hiang</div>
         <div class="small"><i class="fa-solid fa-location-dot"></i> Singapore</div>
         <div class="small"><i class="fa-solid fa-envelope"></i> gohkhoonhiang@gmail.com</div>
+      </div>
+
+      <div class="paragraph">
+        I don't just write code. I manage various stakeholders, balancing between engineering cost and delivery
+        excellence. Given a problem, I disect the requirements, identify edge cases, then find a solution that solves
+        the problem not just for the present, but also anticipating the future. Because I believe cost effectiveness
+        comes from not having to overhaul existing solution when the requirements become more complex.
       </div>
 
       <div class="tags">
@@ -136,7 +143,17 @@
 
       <div class="paragraph">
         During my sabbatical from full-time employment, I have worked on a personal passion project,
-        <strong>coffeebrewapps.com</strong>.
+        <strong>coffeebrewapps.com</strong>. I constantly challenge my comfort zone, and learn to work on new
+        technologies I've never used during my previous jobs.
+      </div>
+
+      <div class="tags">
+        <div class="tag">Ruby</div>
+        <div class="tag">Jekyll</div>
+        <div class="tag">VueJS</div>
+        <div class="tag">NodeJS</div>
+        <div class="tag">Go</div>
+        <div class="tag">ReactJS</div>
       </div>
 
       <div class="cards">
@@ -161,8 +178,8 @@
           </div>
 
           <div class="paragraph">
-            I've created the <strong>SG Bank Interests Compare App</strong> and <strong>SG SSB Tracker App</strong>.
-            Both are hosted on Github Pages and free for public use.
+            I've created multiple web apps: <strong>SG Bank Interests Compare App</strong>,
+            <strong>SG SSB Tracker App</strong>, <strong>Triple Tee App (Solopreneur Accounting)</strong> and more.
           </div>
         </div>
 
@@ -188,9 +205,19 @@
       <div class="subtitle">Ascenda Loyalty Pte. Ltd. (Staff Software Engineer)</div>
 
       <div class="paragraph">
-        I was one of the earliest members in the Tech Team, and have helped built several key products for the company
-        over the years. Having been in the team for almost 7 years, I've had the opportunity to apply various skills
-        on several projects.
+        I was one of the earliest members in the Tech Team, and have helped grow the company's products suite over
+        the years. I've managed various projects to deliver quality solutions on schedule and reduce engineering
+        cost for the company.
+      </div>
+
+      <div class="tags">
+        <div class="tag">Ruby</div>
+        <div class="tag">Rails</div>
+        <div class="tag">Hanami</div>
+        <div class="tag">VueJS</div>
+        <div class="tag">Automated Testing</div>
+        <div class="tag">Business Analysis</div>
+        <div class="tag">Project Management</div>
       </div>
 
       <div class="cards">
@@ -244,8 +271,9 @@
           </div>
 
           <div class="paragraph">
-            Lead <strong>two major project launches</strong> on the E2E loyalty platform <strong>on schedule</strong>,
-            receiving positive feedback from high-profile clients.
+            Balancing between engineering cost and delivery quality and timeliness, leading
+            <strong>two major project launches</strong> on the E2E loyalty platform <strong>on schedule</strong>
+            with positive feedback from high-profile clients.
           </div>
         </div>
 
@@ -295,6 +323,14 @@
         Aside from the applications used by the logistics business, I've also helped transform the company's
         paper-based requests workflow to digital workflow using <strong>Joget Workflow</strong>.
       </div>
+
+      <div class="tags">
+        <div class="tag">Java</div>
+        <div class="tag">Spring</div>
+        <div class="tag">Ninja</div>
+        <div class="tag">ExtJS</div>
+        <div class="tag">AngularJS</div>
+      </div>
     </div> <!-- wrapper -->
   </div> <!-- section -->
 
@@ -315,6 +351,14 @@
         writing <strong>specification documentations</strong> for the developers, performing <strong>testing</strong>
         and providing <strong>technical support</strong> during court sessions.
       </div>
+
+      <div class="tags">
+        <div class="tag">Java</div>
+        <div class="tag">HTML</div>
+        <div class="tag">CSS</div>
+        <div class="tag">Business Analysis</div>
+        <div class="tag">Project Management</div>
+      </div>
     </div> <!-- wrapper -->
   </div> <!-- section -->
 
@@ -334,6 +378,12 @@
         <strong>top 5%</strong> of the cohort with a Semester Cumulative Average Point of at least 4.5/5. In the same
         semester, I was awarded the <strong>National Infocomm Scholarship</strong> and secured a position as Software
         Engineer in Equaria Technologies Pte. Ltd. before graduation.
+      </div>
+
+      <div class="tags">
+        <div class="tag">Java</div>
+        <div class="tag">C#</div>
+        <div class="tag">Software Engineering</div>
       </div>
     </div> <!-- wrapper -->
   </div> <!-- section -->
@@ -487,6 +537,9 @@
   gap: 0.5rem;
 }
 
+.profile .paragraph {
+}
+
 .profile .avatar {
   width: 6rem;
   height: 6rem;
@@ -501,7 +554,7 @@
   font-size: 1rem;
 }
 
-.profile .tags {
+.tags {
   margin: 1rem 0;
   display: flex;
   flex-direction: row;
@@ -509,12 +562,16 @@
   gap: 1rem;
 }
 
-.profile .tags .tag {
+.tags .tag {
   padding: 0.5rem 1rem;
   border-radius: 0.5rem;
   font-size: 0.8rem;
   font-weight: 600;
   background-color: var(--secondary-background-color);
+}
+
+.section.odd .tags .tag {
+  background-color: var(--main-background-color);
 }
 
 .section.socials {
@@ -628,6 +685,10 @@
   .hero .subtitle {
     font-size: 1.6rem !important;
     line-height: 2rem !important;
+  }
+
+  .hero .paragraph {
+    line-height: 1.6rem !important;
   }
 
   .section .paragraph {

@@ -10442,14 +10442,19 @@ a.back-to-top:hover {
   .section.profile .subtitle {
     align-items: center !important;
   }
+  .section.profile .paragraph {
+    display: block !important;
+    text-align: center;
+    font-size: 1rem !important;
+  }
   .section.profile .avatar {
     width: 4rem;
     height: 4rem;
   }
-  .section.profile .tags {
+  .section .tags {
     justify-content: center !important;
   }
-  .section.profile .tags .tag {
+  .section .tags .tag {
     border-bottom: 1px solid var(--main-text-color) !important;
   }
   .section.socials {
