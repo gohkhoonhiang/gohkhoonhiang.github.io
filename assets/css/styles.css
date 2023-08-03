@@ -10414,19 +10414,7 @@ a.back-to-top:hover {
     display: block !important;
   }
   .hero {
-    min-height: auto !important;
-  }
-  .hero .wrapper {
-    padding: 1rem !important;
-  }
-  .hero .title {
-    text-align: center;
-    font-size: 1rem !important;
-    line-height: 0.5rem !important;
-  }
-  .hero .subtitle {
-    text-align: center;
-    font-size: 1rem !important;
+    display: none !important;
   }
   .section {
     min-height: auto !important;
@@ -10436,7 +10424,7 @@ a.back-to-top:hover {
   }
   .section.profile .wrapper,
   .section.socials .wrapper {
-    padding: 1rem !important;
+    padding: 0 0.5rem !important;
     align-items: center !important;
   }
   .section.profile .subtitle {
@@ -10444,18 +10432,23 @@ a.back-to-top:hover {
   }
   .section.profile .paragraph {
     display: block !important;
-    text-align: center;
+    text-align: justify;
     font-size: 1rem !important;
   }
   .section.profile .avatar {
     width: 4rem;
     height: 4rem;
   }
+  .section.profile .tags {
+    width: 70%;
+  }
   .section .tags {
+    gap: 0.5rem;
     justify-content: center !important;
   }
   .section .tags .tag {
-    border-bottom: 1px solid var(--main-text-color) !important;
+    padding: 4px 8px;
+    border: 1px solid var(--main-text-color) !important;
   }
   .section.socials {
     order: 2 !important;
@@ -10487,18 +10480,28 @@ a.back-to-top:hover {
   .section.experience-0 {
     page-break-after: always !important;
   }
+  .section .wrapper {
+    padding: 0 1rem !important;
+  }
   .section .paragraph {
     max-width: 100% !important;
     margin-bottom: 0.5rem !important;
   }
+  .section .title {
+    text-decoration: underline;
+  }
   .cards {
-    padding: 1rem !important;
+    padding: 0.5rem 1rem !important;
     flex-direction: column !important;
   }
   .cards .card {
     width: 80% !important;
     margin: 0 !important;
-    padding: 1rem !important;
+    padding: 0 1rem !important;
+  }
+  .cards .card .title {
+    padding: 0.5rem 0 !important;
+    text-decoration: underline;
   }
 }
 
