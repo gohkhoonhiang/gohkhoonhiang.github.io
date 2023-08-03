@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*!
  * Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com
  * License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License)
@@ -10384,7 +10385,7 @@ a.back-to-top:hover {
 }
 @media print {
   :root {
-    font-size: 14px !important;
+    font-size: 12px !important;
     --main-background-color: #ffffff !important;
     --secondary-background-color: #ffffff !important;
   }
@@ -10440,7 +10441,14 @@ a.back-to-top:hover {
     height: 4rem;
   }
   .section.profile .tags {
-    width: 70%;
+    width: 100% !important;
+  }
+  .section .title {
+    padding: 0.5rem 0 !important;
+  }
+  .section .subtitle {
+    font-size: 1.2rem !important;
+    margin-bottom: 0.5rem !important;
   }
   .section .tags {
     gap: 0.5rem;
@@ -10452,6 +10460,11 @@ a.back-to-top:hover {
   }
   .section.socials {
     order: 2 !important;
+    padding-bottom: 0.5rem !important;
+    border-bottom: 1px solid var(--main-text-color) !important;
+  }
+  .section.socials .links .noprint {
+    display: none;
   }
   .section.socials .links {
     width: 100% !important;
@@ -10478,10 +10491,25 @@ a.back-to-top:hover {
     order: 3 !important;
   }
   .section.experience-0 {
-    page-break-after: always !important;
+    padding-top: 0.5rem !important;
+  }
+  .section.experience-3 {
+    padding-bottom: 0.5rem !important;
   }
   .section .wrapper {
     padding: 0 1rem !important;
+  }
+  .section.print {
+    display: block !important;
+    padding-top: 0.5rem !important;
+    border-top: 1px solid var(--main-text-color) !important;
+  }
+  .section.education {
+    order: 4 !important;
+  }
+  .section.print .title {
+    font-size: 1.2rem !important;
+    text-decoration: none !important;
   }
   .section .paragraph {
     max-width: 100% !important;
@@ -10500,8 +10528,11 @@ a.back-to-top:hover {
     padding: 0 1rem !important;
   }
   .cards .card .title {
-    padding: 0.5rem 0 !important;
-    text-decoration: underline;
+    display: none;
+  }
+  .cards .card .paragraph:before {
+    content: "•";
+    font-weight: 600;
   }
 }
 
