@@ -10385,7 +10385,7 @@ a.back-to-top:hover {
 }
 @media print {
   :root {
-    font-size: 12px !important;
+    font-size: 13px !important;
     --main-background-color: #ffffff !important;
     --secondary-background-color: #ffffff !important;
   }
@@ -10419,9 +10419,14 @@ a.back-to-top:hover {
   }
   .section {
     min-height: auto !important;
+    margin: 1rem 0 !important;
   }
   .section.profile {
     order: 1 !important;
+  }
+  .section.profile,
+  .section.socials {
+    margin: 0 !important;
   }
   .section.profile .wrapper,
   .section.socials .wrapper {
@@ -10435,6 +10440,7 @@ a.back-to-top:hover {
     display: block !important;
     text-align: justify;
     font-size: 1rem !important;
+    padding: 0.5rem 0 !important;
   }
   .section.profile .avatar {
     width: 4rem;
@@ -10442,6 +10448,8 @@ a.back-to-top:hover {
   }
   .section.profile .tags {
     width: 100% !important;
+    justify-content: flex-start !important;
+    gap: 4px !important;
   }
   .section .title {
     padding: 0.5rem 0 !important;
@@ -10451,16 +10459,27 @@ a.back-to-top:hover {
     margin-bottom: 0.5rem !important;
   }
   .section .tags {
+    margin: 0.5rem 0 1rem !important;
     gap: 0.5rem;
     justify-content: center !important;
   }
   .section .tags .tag {
-    padding: 4px 8px;
-    border: 1px solid var(--main-text-color) !important;
+    padding: 0;
+    font-size: 1rem !important;
+  }
+  .section .tags .tag:first-child:before {
+    content: "SKILLS:";
+    padding-right: 0.5rem;
+  }
+  .section .tags .tag:after {
+    content: ",";
+  }
+  .section .tags .tag:last-child:after {
+    content: "";
   }
   .section.socials {
     order: 2 !important;
-    padding-bottom: 0.5rem !important;
+    padding-bottom: 1rem !important;
     border-bottom: 1px solid var(--main-text-color) !important;
   }
   .section.socials .links .noprint {
@@ -10469,6 +10488,7 @@ a.back-to-top:hover {
   .section.socials .links {
     width: 100% !important;
     justify-content: center;
+    gap: 3rem !important;
   }
   .section.socials .links .column .title {
     display: none;
@@ -10483,6 +10503,10 @@ a.back-to-top:hover {
     padding: initial !important;
     font-size: initial !important;
     font-weight: initial !important;
+  }
+  .section.socials .links .list {
+    margin-block-start: 0.5rem !important;
+    margin-block-end: 0.5rem !important;
   }
   .section.experience-0,
   .section.experience-1,
@@ -10511,6 +10535,13 @@ a.back-to-top:hover {
     font-size: 1.2rem !important;
     text-decoration: none !important;
   }
+  .section .paragraph.print {
+    display: inline-block !important;
+    margin: 0 !important;
+  }
+  .section .paragraph.print .title {
+    text-decoration: none !important;
+  }
   .section .paragraph {
     max-width: 100% !important;
     margin-bottom: 0.5rem !important;
@@ -10519,7 +10550,7 @@ a.back-to-top:hover {
     text-decoration: underline;
   }
   .cards {
-    padding: 0.5rem 1rem !important;
+    padding: 0 1rem !important;
     flex-direction: column !important;
   }
   .cards .card {
