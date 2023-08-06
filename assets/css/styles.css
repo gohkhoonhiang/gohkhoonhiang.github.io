@@ -10385,7 +10385,7 @@ a.back-to-top:hover {
 }
 @media print {
   :root {
-    font-size: 13px !important;
+    font-size: 12px !important;
     --main-background-color: #ffffff !important;
     --secondary-background-color: #ffffff !important;
   }
@@ -10438,9 +10438,13 @@ a.back-to-top:hover {
   }
   .section.profile .paragraph {
     display: block !important;
-    text-align: justify;
+    text-align: left;
     font-size: 1rem !important;
     padding: 0.5rem 0 !important;
+  }
+  .section.profile .paragraph p {
+    margin-block-start: 0 !important;
+    margin-block-end: 0.5rem !important;
   }
   .section.profile .avatar {
     width: 4rem;
