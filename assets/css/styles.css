@@ -10379,6 +10379,10 @@ a.back-to-top:hover {
   background-color: var(--main-text-color);
 }
 
+.printonly {
+  display: none;
+}
+
 @page {
   size: A4;
   margin: 0;
@@ -10465,15 +10469,10 @@ a.back-to-top:hover {
   .section .tags {
     margin: 0.5rem 0 1rem !important;
     gap: 0.5rem;
-    justify-content: center !important;
   }
   .section .tags .tag {
     padding: 0;
     font-size: 1rem !important;
-  }
-  .section .tags .tag:first-child:before {
-    content: "SKILLS:";
-    padding-right: 0.5rem;
   }
   .section .tags .tag:after {
     content: ",";
@@ -10485,6 +10484,9 @@ a.back-to-top:hover {
     order: 2 !important;
     padding-bottom: 1rem !important;
     border-bottom: 1px solid var(--main-text-color) !important;
+  }
+  .printonly {
+    display: initial !important;
   }
   .section.socials .links .noprint {
     display: none;
@@ -10518,11 +10520,18 @@ a.back-to-top:hover {
   .section.experience-3 {
     order: 3 !important;
   }
-  .section.experience-0 {
-    padding-top: 0.5rem !important;
-  }
   .section.experience-3 {
     padding-bottom: 0.5rem !important;
+  }
+  .section.experience-3,
+  .section.education,
+  .section.skills {
+    padding-top: 0.5rem !important;
+    border-top: 1px solid var(--main-text-color) !important;
+  }
+  .section .heading {
+    text-decoration: none !important;
+    font-style: italic !important;
   }
   .section .wrapper {
     padding: 0 1rem !important;
@@ -10534,6 +10543,9 @@ a.back-to-top:hover {
   }
   .section.education {
     order: 4 !important;
+  }
+  .section.skills {
+    order: 5 !important;
   }
   .section.print .title {
     font-size: 1.2rem !important;
